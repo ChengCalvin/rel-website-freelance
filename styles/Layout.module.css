@@ -5,3 +5,9 @@
   align-items: center;
   padding: 1rem;
 }
+
+@media (max-width: 552px){
+  .navmenu{
+    display:none;
+  }
+}

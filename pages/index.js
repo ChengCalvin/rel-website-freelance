@@ -1,29 +1,67 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavMenu from "../components/Layout/NavMenu";
+import FounderDisplay from "../components/FoundersDisplay/FounderDisplay";
+
+let founders = [
+  { name: "HERBERT RASTCH", Description: "xxx" },
+  { name: "ALEXANDRE ETHIER", Description: "xxx" },
+];
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         {/* website tab title */}
-        <title>REALTY</title>
+        <title> REL REALTY ADVISOR</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+          rel="stylesheet"
+        ></link>
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, maximum-scale=1, width=device-width, height=device-height, user-scalable=no"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="HandheldFriendly" content="true" />
       </Head>
       <header className={styles.header}>
         <img
-          style={{ width: "260px", height: "75px", padding: "0.5rem" }}
+          style={{ width: "20%", height: "25%", padding: "0.5rem", minWidth: '260px' }}
           src="images/relLogo.png"
-        ></img>
+          alt="rel-Logo"
+        />
         <NavMenu />
       </header>
 
       <main className={styles.main}>
-        <div className={styles.pagetitle}>REL REALTY ADVISOR</div>
-        <div>
-          REL Realty Advisor is a consortium of real estate professional
+        <div className={styles.pagetitle}>
+          <div className={styles.pagetitlelogocontent}>
+            <img
+              style={{ width: "100%", height: "40%" }}
+              src="images/RELLogoWhite.png"
+              alt="rel-Logo-White"
+            />
+            <div className={styles.pagetitletextcontent}>
+              REL Realty Advisors is a consortium of real estate professionals
+              who have been collaborating successfully on various projects for
+              nearly fifteen years. REL Realty Advisors focuses on resort
+              development, master-planned amenity properties and residential
+              communities. The founding partners have been involved in the real
+              estate milieu of development, project management and
+              commercialization for many years.
+            </div>
+          </div>
         </div>
-        <div>12</div>
+        <div className={styles.foundersection}>
+          <img
+            src="images/foundersection.jpg"
+            style={{ width: "100%", height: "100%", zIndex: "2" }}
+          />
+          <div className={styles.foundersectionoverlay}></div>
+          <FounderDisplay founders={founders} />
+        </div>
       </main>
 
       <footer className={styles.footer}>REL REALTY ADVISOR</footer>
