@@ -6,6 +6,24 @@
   padding: 1rem;
 }
 
+.drawerbtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.drawerbtnline{
+  width: 20px;
+  height: 1px;
+  background: black;
+}
+
 @media (max-width: 552px){
   .navmenu{
     display:none;
