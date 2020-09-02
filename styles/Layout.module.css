@@ -6,8 +6,8 @@
   padding: 1rem;
 }
 
-@media (max-width: 552px){
-  .navmenu{
-    display:none;
+@media (max-width: 552px) {
+  .navmenu {
+    display: none;
   }
 }
