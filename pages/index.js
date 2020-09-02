@@ -8,8 +8,22 @@ import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 
 let founders = [
-  { name: "HERBERT RASTCH", Description: "xxx" },
-  { name: "ALEXANDRE ETHIER", Description: "xxx" },
+  {
+    name: "HERBERT RASTCH",
+    title1: "Partner at REL Realty Advisors",
+    title2: "President at Herbie Holdings",
+    title3: "Certified Real Estate Broker",
+    email: "herbert@relra.com",
+    phone: "C: 819-429-9019",
+    cellphone: "C: 514-884-8269",
+    tollfree: "TF: 1-866-681-7557",
+  },
+  {
+    name: "ALEXANDRE ETHIER",
+    title1: "Partner at REL Realty Advisor",
+    title2: "President and Project Director at COGERCO",
+    cellphone: "450-675-2566",
+  },
 ];
 
 export default function Home() {

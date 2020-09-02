@@ -1,4 +1,4 @@
-.foundercontainer {
+.founderscontainer {
   z-index: 4;
   position: absolute;
   width: 50%;
@@ -10,14 +10,71 @@
   height: 40%;
 }
 
+.founderpartnertitle {
+  font-weight: 900;
+  font-size: 3rem;
+}
+
 .allfounder {
   display: flex;
   height: 40%;
   margin-top: 2rem;
+  text-align: center;
+}
+
+.foundercontainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 240px;
+}
+
+.foundername {
+  font-weight: 900;
+}
+
+.foundertitlecontainer {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .verticalline {
   border-left: 2px solid white;
   margin-left: 2rem;
   margin-right: 2rem;
+}
+
+@media (min-width: 320px) {
+  .founderscontainer {
+    width: 90%;
+  }
+  .foundercontainer {
+    max-width: 50%;
+  }
+  .founderpartnertitle {
+    font-weight: 900;
+    font-size: 1.5rem;
+  }
+  .foundertitlecontainer {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .founderscontainer {
+    width: 80%;
+  }
+  .founderpartnertitle {
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  .foundertitlecontainer {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .founderscontainer {
+    width: 50%;
+  }
 }
