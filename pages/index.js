@@ -68,7 +68,7 @@ export default function Home() {
         <div className={styles.pagetitle}>
           <div className={styles.pagetitlelogocontent}>
             <img
-              style={{ width: "100%", height: "40%" }}
+              className={styles.pagetitlelogo}
               src="images/RELLogoWhite.png"
               alt="rel-Logo-White"
             />
