@@ -91,12 +91,25 @@
   margin-left: 0.5rem;
 }
 
-@media(max-width: 414px){
-  .container{
-    width: 100%
-  }
+/* small phone */
+@media(min-width: 320px){
   .header {
-    display: flex;
-    justify-content: space-between;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}
+
+@media(min-width: 768px){
+  .header {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+/* laptops */
+@media(min-width: 1200px){
+  .header {
+    padding-left: 24vw;
+    padding-right: 24vw;
   }
 }

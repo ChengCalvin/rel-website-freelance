@@ -6,8 +6,32 @@
   padding: 1rem;
 }
 
+<<<<<<< HEAD
 @media (max-width: 552px) {
   .navmenu {
     display: none;
+=======
+.drawerbtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 24px;
+  width: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.drawerbtnline{
+  width: 20px;
+  height: 1px;
+  background: black;
+}
+
+@media (max-width: 552px){
+  .navmenu{
+    display:none;
+>>>>>>> 69a3c45d6ba89ce896af8006f458fa2e798fe757
   }
 }
