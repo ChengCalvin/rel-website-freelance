@@ -64,7 +64,7 @@
   height: 40%;
 }
 
-.foundersectiontext{
+.foundersectiontext {
   z-index: 4;
   position: absolute;
   width: 50%;
@@ -75,7 +75,7 @@
   margin-top: 20rem;
 }
 
-.allfoundernamecontainer{
+.allfoundernamecontainer {
   display: flex;
 }
 
@@ -92,22 +92,29 @@
 }
 
 /* small phone */
-@media(min-width: 320px){
+@media (min-width: 320px) {
   .header {
     padding-left: 1vw;
     padding-right: 1vw;
   }
+  .sidedrawerbtn {
+    display: flex;
+    align-items: center;
+  }
 }
 
-@media(min-width: 768px){
+@media (min-width: 768px) {
   .header {
     padding-left: 10vw;
     padding-right: 10vw;
   }
+  .sidedrawerbtn {
+    display: none;
+  }
 }
 
 /* laptops */
-@media(min-width: 1200px){
+@media (min-width: 1200px) {
   .header {
     padding-left: 24vw;
     padding-right: 24vw;

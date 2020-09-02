@@ -1,9 +1,11 @@
-import styles from '../../../../styles/Layout.module.css'
+import styles from "../../../../styles/Layout.module.css";
 
-const DrawerButton = () => (<div className={styles.drawerbtn}>
+const DrawerButton = (props) => (
+  <div className={styles.drawerbtn} onClick={props.drawerbtnClicked}>
     <div className={styles.drawerbtnline}></div>
     <div className={styles.drawerbtnline}></div>
     <div className={styles.drawerbtnline}></div>
-</div>)
+  </div>
+);
 
 export default DrawerButton;

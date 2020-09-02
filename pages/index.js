@@ -1,7 +1,11 @@
+import React, { useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavMenu from "../components/Layout/NavMenu";
 import FounderDisplay from "../components/FoundersDisplay/FounderDisplay";
+import DrawerButton from "../components/Layout/SideDrawer/DrawerButton/DrawerButton";
+import Backdrop from "../components/Layout/Backdrop/Backdrop";
+import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 
 let founders = [
   { name: "HERBERT RASTCH", Description: "xxx" },
@@ -9,6 +13,11 @@ let founders = [
 ];
 
 export default function Home() {
+  let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+
+  const drawerbtnClickedHandler = () => {
+    setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
+  };
   return (
     <div className={styles.container}>
       <Head>
@@ -28,11 +37,31 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         <img
-          style={{ width: "20%", height: "25%", padding: "0.5rem", minWidth: '260px' }}
+          style={{
+            width: "20%",
+            height: "25%",
+            padding: "0.5rem",
+            minWidth: "260px",
+          }}
           src="images/relLogo.png"
           alt="rel-Logo"
         />
         <NavMenu />
+        <div className={styles.sidedrawerbtn}>
+          <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
+          {drawerbtnActivated ? (
+            <>
+              <Backdrop
+                showBackdrop={drawerbtnActivated}
+                backdropClicked={drawerbtnClickedHandler}
+              />
+              <SideDrawer
+                showSideDrawer={drawerbtnActivated}
+                backdropClicked={drawerbtnClickedHandler}
+              />
+            </>
+          ) : null}
+        </div>
       </header>
 
       <main className={styles.main}>

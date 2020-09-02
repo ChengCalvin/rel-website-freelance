@@ -10,9 +10,11 @@ let menuContent = [
 
 const NavMenu = () => (
   <div className={styles.navmenu}>
-    {menuContent.map((menucontent) => (
+    {menuContent.map((menucontent, i) => (
       <Link href={menucontent.link}>
-        <div>{menucontent.title}</div>
+        <div className={styles.navmenutitle} key={i}>
+          {menucontent.title}
+        </div>
       </Link>
     ))}
   </div>
