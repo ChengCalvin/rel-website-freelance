@@ -1,0 +1,92 @@
+.contactus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+.contactustitle {
+  font-size: 2rem;
+}
+
+.contactname {
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+}
+.contactfirstname {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactfirstname input {
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.contactlastname {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+}
+
+.contactlastname input {
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.contactemail {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.contactemail input {
+  width: 100%;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.contactmessage {
+  width: 100%;
+  margin-top: 2rem;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.contactmessage textarea {
+  width: 100%;
+  height: 60%;
+  resize: none;
+  margin-top: 0.5rem;
+  border: 3px solid red;
+  /* width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: justify;
+  resize: none;
+  height: 70%; */
+}
+
+@media (min-width: 768px) {
+  .contactus {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contactus {
+    padding-left: 24vw;
+    padding-right: 24vw;
+  }
+}

@@ -18,7 +18,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .pagetitle {
@@ -41,6 +41,7 @@
   font-size: 18px;
   text-align: justify;
   line-height: 2rem;
+  font-weight: 100;
 }
 
 .foundersection {
@@ -79,16 +80,107 @@
   display: flex;
 }
 
+.successstorybackground {
+  background-color: #003a70;
+  margin-top: 2rem;
+  width: 100%;
+  height: 87rem;
+  display: flex;
+  justify-content: center;
+}
+
+.successstorycontent {
+  width: 100%;
+  color: white;
+  text-align: justify;
+}
+
+.successstorytitle {
+  font-size: 1.82rem;
+  padding: 1rem 0rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+}
+
+.novatitle {
+  width: 100%;
+}
+
+.novacontenttitle {
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  font-size: 2.2rem;
+  margin: 2rem 0rem;
+  font-weight: 500;
+}
+
+.novacontentdescription {
+  font-weight: 100;
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+.novacontentimage {
+  width: 100%;
+  margin: 2rem 0rem;
+}
+
+.discovernovabtn {
+  border: none;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0.7rem 0rem;
+}
+
+.discovernovabtn:hover {
+  cursor: pointer;
+}
+
+.discovernovabtntext {
+  color: #003a70;
+  font-weight: 600;
+}
+
+.contactuscontainer {
+  background-color: rgb(156, 156, 156);
+  width: 100%;
+  height: 40rem;
+  margin-top: 2rem;
+  color: white;
+}
+
 .footer {
   width: 100%;
   border-top: 1px solid #eaeaea;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+.footeremail {
+  width: 100%;
+  background-color: #006a52;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0rem;
+  font-weight: 900;
+  color: white;
+}
+
+.footercopyright {
+  width: 100%;
+  background-color: #005a44;
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 900;
 }
 
 /* small phone */
@@ -117,6 +209,10 @@
     text-align: justify;
     line-height: 2rem;
   }
+  .successstorycontent {
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
 }
 
 @media (min-width: 768px) {
@@ -143,6 +239,10 @@
     text-align: justify;
     line-height: 2rem;
   }
+  .successstorycontent {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
 }
 
 /* laptops */
@@ -158,5 +258,9 @@
   .pagetitlelogo {
     width: 100%;
     height: 40%;
+  }
+  .successstorycontent {
+    padding-left: 24vw;
+    padding-right: 24vw;
   }
 }
