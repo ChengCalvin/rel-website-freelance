@@ -90,7 +90,7 @@ const ContactUs = () => {
         />
       </div>
       <div className={styles.contactemailscontainer}>
-        <div style={{ display: "flex", width: "100%" }}>
+        <div className={styles.relcontactemail1}>
           <div className={styles.contactperson}>
             General inquiries: info@relra.com
           </div>

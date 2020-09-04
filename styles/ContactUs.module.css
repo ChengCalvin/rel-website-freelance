@@ -16,9 +16,11 @@
   width: 100%;
   display: flex;
   margin-top: 2rem;
+  flex-direction: column;
 }
+
 .contactfirstname {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -35,10 +37,9 @@
 }
 
 .contactlastname {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: 3rem;
 }
 
 .contactlastname input {
@@ -98,7 +99,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 4.6rem;
 }
 
 .submitbtn:hover {
@@ -115,10 +116,16 @@
   flex-direction: column;
 }
 
-.contactperson {
+.relcontactemail1 {
+  display: flex;
   width: 100%;
+  flex-direction: column;
+}
+
+.contactperson {
   font-size: 1.2rem;
   margin-top: 0.5rem;
+  min-width: 378px;
 }
 
 .submitbtn:hover {
@@ -129,6 +136,27 @@
   .contactus {
     padding-left: 10vw;
     padding-right: 10vw;
+  }
+  .contactname {
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+  .contactfirstname {
+    width: 50%;
+  }
+  .contactlastname {
+    width: 50%;
+    margin-left: 3rem;
+  }
+  .relcontactemail1 {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .submitbtn {
+    margin-top: 4rem;
   }
 }
 
