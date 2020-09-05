@@ -15,16 +15,11 @@ let founders = [
     title1: "Partner at REL Realty Advisors",
     title2: "President at Herbie Holdings",
     title3: "Certified Real Estate Broker",
-    email: "herbert@relra.com",
-    phone: "C: 819-429-9019",
-    cellphone: "C: 514-884-8269",
-    tollfree: "TF: 1-866-681-7557",
   },
   {
     name: "ALEXANDRE ETHIER",
     title1: "Partner at REL Realty Advisor",
     title2: "President and Project Director at COGERCO",
-    cellphone: "450-675-2566",
   },
 ];
 
@@ -39,7 +34,7 @@ export default function Home() {
       <Head>
         {/* website tab title */}
         <title> REL REALTY ADVISOR</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/relLogo2.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
           rel="stylesheet"
@@ -113,7 +108,10 @@ export default function Home() {
             style={{ width: "100%", height: "100%", zIndex: "2" }}
           />
           <div className={styles.foundersectionoverlay}></div>
-          <FounderDisplay founders={founders} />
+          <div className={styles.founderscontainer}>
+            <div className={styles.founderpartnertitle}>FOUNDING PARTNERS</div>
+            <FounderDisplay founders={founders} />
+          </div>
         </div>
 
         <div className={styles.successstorybackground}>

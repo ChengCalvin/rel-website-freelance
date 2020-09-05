@@ -92,7 +92,7 @@ const ContactUs = () => {
       <div className={styles.contactemailscontainer}>
         <div className={styles.relcontactemail1}>
           <div className={styles.contactperson}>
-            General inquiries: info@relra.com
+            General Inquiries: info@relra.com
           </div>
           <div className={styles.contactperson}>
             Alexandre Ethier: alexandre@relra.com

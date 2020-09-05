@@ -101,6 +101,10 @@
   align-items: center;
   margin-top: 4.6rem;
 }
+.submitbtndisabled {
+  color: rgb(156, 156, 156);
+  background-color: red;
+}
 
 .submitbtn:hover {
   background-color: #006a52;

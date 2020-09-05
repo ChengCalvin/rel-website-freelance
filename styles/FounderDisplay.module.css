@@ -1,20 +1,3 @@
-.founderscontainer {
-  z-index: 4;
-  position: absolute;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 25rem;
-  height: 40%;
-}
-
-.founderpartnertitle {
-  font-weight: 900;
-  font-size: 3rem;
-}
-
 .allfounder {
   display: flex;
   height: 40%;
@@ -46,9 +29,6 @@
 }
 
 @media (min-width: 320px) {
-  .founderscontainer {
-    width: 90%;
-  }
   .foundercontainer {
     max-width: 50%;
   }
@@ -62,20 +42,11 @@
 }
 
 @media (min-width: 768px) {
-  .founderscontainer {
-    width: 80%;
-  }
   .founderpartnertitle {
     font-weight: 900;
     font-size: 3rem;
   }
   .foundertitlecontainer {
     font-size: 1rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .founderscontainer {
-    width: 50%;
   }
 }

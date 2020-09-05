@@ -1,0 +1,50 @@
+.founderinfowhitecontainer {
+  width: 100%;
+  background-color: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.foundercontentcontainer {
+  display: flex;
+}
+
+.profilepicandtitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 2rem 2rem;
+  width: 30%;
+  color: #006a52;
+  line-height: 2rem;
+}
+
+.verticalline {
+  border-left: 2px solid #006a52;
+  margin: 2rem 2rem 2rem 0rem;
+}
+
+.imagesize {
+  width: 100%;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.description {
+  width: 60%;
+  margin: 2rem 2rem 2rem 0rem;
+  white-space: pre-line;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+.achievemnttitle {
+  color: #006a52;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 2rem 0rem 0rem 0rem;
+}

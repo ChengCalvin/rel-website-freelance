@@ -5,7 +5,7 @@ let menuContent = [
   { title: "HOME", link: "/" },
   { title: "ABOUT", link: "/about" },
   { title: "PARTNER", link: "/partner" },
-  { title: "CONTACT US", link: "contactus" },
+  { title: "CONTACT US", link: "/contactus" },
 ];
 
 const NavMenu = () => (
