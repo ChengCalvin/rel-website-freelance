@@ -35,7 +35,7 @@ const About = () => {
           name="viewport"
           content="initial-scale=1.0, maximum-scale=1, width=device-width, height=device-height, user-scalable=no"
         />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="HandheldFriendly" content="true" />
       </Head>
       <header className={styles.header}>

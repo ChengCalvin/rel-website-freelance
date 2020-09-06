@@ -11,7 +11,7 @@ let menuContent = [
 const NavMenu = () => (
   <div className={styles.navmenu}>
     {menuContent.map((menucontent, i) => (
-      <Link href={menucontent.link} key={i}>
+      <Link href={menucontent.link} key={i} as={menucontent.link}>
         <div className={styles.navmenutitle} key={i}>
           {menucontent.title}
         </div>

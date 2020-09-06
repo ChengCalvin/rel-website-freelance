@@ -69,7 +69,7 @@ const Partner = () => {
           name="viewport"
           content="initial-scale=1.0, maximum-scale=1, width=device-width, height=device-height, user-scalable=no"
         />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="HandheldFriendly" content="true" />
       </Head>
       <header className={styles.header}>
@@ -118,17 +118,8 @@ const Partner = () => {
         </div>
         <div className={styles.foundersbackgroundcontainer}>
           <div className={styles.foundersdetailcontainer}>
-            {partners.map((partner) => (
-              <FounderAchievement
-                profileImage={partner.profileImage}
-                name={partner.name}
-                title1={partner.title1}
-                title2={partner.title2}
-                title3={partner.title3}
-                description={partner.description}
-                achievementSubtitle={partner.achievementSubtitle}
-                allAchievements={partner.allAchievements}
-              />
+            {partners.map((partner, i) => (
+              <FounderAchievement key={i} partner={partner} />
             ))}
           </div>
         </div>

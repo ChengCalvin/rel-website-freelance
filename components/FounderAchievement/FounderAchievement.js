@@ -5,22 +5,26 @@ const FounderAchievement = (props) => {
     <div className={styles.founderinfowhitecontainer}>
       <div className={styles.foundercontentcontainer}>
         <div className={styles.profilepicandtitle}>
-          <img className={styles.imagesize} src={props.profileImage} />
-          <div className={styles.name}>{props.name}</div>
-          <div>{props.title1}</div>
-          <div>{props.title2}</div>
-          <div>{props.title3}</div>
+          <img
+            className={styles.imagesize}
+            src={props.partner.profileImage}
+            alt={props.partner.alt}
+          />
+          <div className={styles.name}>{props.partner.name}</div>
+          <div>{props.partner.title1}</div>
+          <div>{props.partner.title2}</div>
+          <div>{props.partner.title3}</div>
         </div>
         <div className={styles.verticalline}></div>
         <div className={styles.description}>
-          <div>{props.description}</div>
+          <div>{props.partner.description}</div>
           <div className={styles.achievemnttitle}>
-            {props.achievementSubtitle}
+            {props.partner.achievementSubtitle}
           </div>
           <div>
             <ul>
-              {props.allAchievements?.map((achievement) => (
-                <li>{achievement}</li>
+              {props.partner.allAchievements?.map((achievement, i) => (
+                <li key={i}>{achievement}</li>
               ))}
             </ul>
           </div>
