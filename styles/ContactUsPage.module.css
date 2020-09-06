@@ -20,6 +20,7 @@
   flex-direction: column;
   margin-bottom: 2rem;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .pagetitle {
@@ -84,8 +85,8 @@
 
 @media (min-width: 320px) {
   .header {
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
   }
   .sidedrawerbtn {
     display: flex;
@@ -94,10 +95,6 @@
 }
 
 @media (min-width: 768px) {
-  .abouttextcontainer {
-    padding-left: 10vw;
-    padding-right: 10vw;
-  }
   .sidedrawerbtn {
     display: none;
   }

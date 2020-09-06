@@ -19,6 +19,8 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .pagetitle {
@@ -45,6 +47,7 @@
 }
 
 .foundersection {
+  width: 100%;
   position: relative;
   margin-top: 2rem;
   height: 650px;
@@ -63,13 +66,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 25rem;
+  margin-top: 15rem;
   height: 40%;
 }
 
 .founderpartnertitle {
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 1.5rem;
 }
 
 .foundersectionoverlay {
@@ -95,6 +98,7 @@
 
 .allfoundernamecontainer {
   display: flex;
+  width: 100%;
 }
 
 .successstorybackground {
@@ -204,8 +208,8 @@
 /* small phone */
 @media (min-width: 320px) {
   .header {
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
   }
   .sidedrawerbtn {
     display: flex;
@@ -230,9 +234,12 @@
   .founderscontainer {
     width: 90%;
   }
+  .foundersection {
+    height: 500px;
+  }
   .successstorycontent {
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
   }
 }
 
@@ -262,7 +269,17 @@
   }
   .founderscontainer {
     width: 80%;
+    margin-top: 25rem;
   }
+
+  .foundersection {
+    height: 650px;
+  }
+  .founderpartnertitle {
+    font-weight: 900;
+    font-size: 3rem;
+  }
+
   .successstorycontent {
     padding-left: 10vw;
     padding-right: 10vw;
