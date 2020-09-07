@@ -127,14 +127,30 @@
   flex-direction: column;
 }
 
+.relcontactemail2{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
 .contactperson {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 0.5rem;
   min-width: 378px;
+  font-weight: 200;
 }
 
 .submitbtn:hover {
   cursor: pointer;
+}
+
+@media (min-width: 320px) {
+  .contactlastname {
+    margin-top: 2rem;
+  }
+  .submitbtn {
+    margin-top: 4rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -153,12 +169,22 @@
   }
   .contactlastname {
     width: 50%;
+    margin-top: 0rem;
     margin-left: 3rem;
   }
   .relcontactemail1 {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
+  }
+  .relcontactemail2 {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contactperson {
+    min-width: 320px;
+    font-size: 1.2rem;
   }
   .submitbtn {
     margin-top: 4rem;

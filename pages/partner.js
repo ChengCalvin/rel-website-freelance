@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import Head from "next/head";
 import NavMenu from "../components/Layout/NavMenu";
 import styles from "../styles/Partner.module.css";
@@ -73,16 +74,18 @@ const Partner = () => {
         <meta name="HandheldFriendly" content="true" />
       </Head>
       <header className={styles.header}>
-        <img
-          style={{
-            width: "20%",
-            height: "25%",
-            padding: "0.5rem",
-            minWidth: "260px",
-          }}
-          src="images/relLogo.png"
-          alt="rel-Logo"
-        />
+        <Link href="/">
+          <img
+            style={{
+              width: "20%",
+              height: "25%",
+              padding: "0.5rem",
+              minWidth: "260px",
+            }}
+            src="images/relLogo.png"
+            alt="rel-Logo"
+          />
+        </Link>
         <NavMenu />
         <div className={styles.sidedrawerbtn}>
           <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />

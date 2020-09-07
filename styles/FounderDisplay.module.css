@@ -1,14 +1,15 @@
 .allfounder {
   display: flex;
   height: 40%;
-  margin-top: 2rem;
   text-align: center;
+  width: 100%;
 }
 
 .foundercontainer {
   display: flex;
   flex-direction: column;
   max-width: 240px;
+  width: 100%;
 }
 
 .foundername {
@@ -29,8 +30,14 @@
 }
 
 @media (min-width: 320px) {
+  .allfounder{
+    margin-top: 1rem;
+  }
   .foundercontainer {
     max-width: 50%;
+  }
+  .foundername{
+    font-size: 1rem;
   }
   .founderpartnertitle {
     font-weight: 900;
@@ -42,6 +49,12 @@
 }
 
 @media (min-width: 768px) {
+  .allfounder{
+    margin-top: 2rem;
+  }
+  .foundername{
+    font-size: 2rem;
+  }
   .founderpartnertitle {
     font-weight: 900;
     font-size: 3rem;

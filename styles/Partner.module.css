@@ -39,15 +39,15 @@
 }
 
 .foundingpartnercontainer {
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 .foundingpartnertitle {
   width: 100%;
   margin: 2rem 0rem;
   font-weight: 600;
-  font-size: 3rem;
+  font-size: 1.7rem;
   display: flex;
   justify-content: center;
   color: #006a52;
@@ -66,8 +66,8 @@
 }
 
 .foundersdetailcontainer {
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 .footer {
@@ -118,6 +118,9 @@
   }
   .sidedrawerbtn {
     display: none;
+  }
+  .foundingpartnertitle{
+    font-size: 3rem;
   }
   .foundingpartnercontainer {
     padding-left: 10vw;

@@ -117,11 +117,11 @@
 }
 
 .successstorytitle {
-  font-size: 1.82rem;
   padding: 1rem 0rem;
   font-weight: 900;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 .novatitle {
@@ -140,7 +140,6 @@
 .novacontentdescription {
   font-weight: 100;
   line-height: 2rem;
-  font-size: 1.3rem;
 }
 
 .novacontentimage {
@@ -170,7 +169,7 @@
 .contactuscontainer {
   background-color: rgb(156, 156, 156);
   width: 100%;
-  height: 43rem;
+  height: 46rem;
   margin-top: 2rem;
   color: white;
 }
@@ -217,11 +216,11 @@
   }
   .pagetitlelogocontent {
     width: 80%;
-    margin-top: 2rem;
+    margin-top: 4rem;
   }
   .pagetitlelogo {
     width: 100%;
-    height: 20%;
+    height: 14%;
   }
   .pagetitletextcontent {
     width: 100%;
@@ -237,9 +236,21 @@
   .foundersection {
     height: 500px;
   }
+  .successstorybackground {
+    height: 70rem;
+  }
   .successstorycontent {
     padding-left: 5vw;
     padding-right: 5vw;
+  }
+  .successstorytitle {
+    font-size: 1.2rem;
+  }
+  .novacontenttitle {
+    font-size: 1.5rem;
+  }
+  .novacontentdescription{
+    font-size: 1.1rem;
   }
 }
 
@@ -257,7 +268,7 @@
   }
   .pagetitlelogo {
     width: 100%;
-    height: 40%;
+    height: 35%;
   }
   .pagetitletextcontent {
     width: 100%;
@@ -279,13 +290,23 @@
     font-weight: 900;
     font-size: 3rem;
   }
-
+  .successstorybackground {
+    height: 87rem;
+  }
   .successstorycontent {
     padding-left: 10vw;
     padding-right: 10vw;
+    height: 10rem;
+  }
+  .successstorytitle {
+    font-size: 1.79rem;
+    text-align: start;
   }
   .contactuscontainer {
     height: 40rem;
+  }
+  .novacontentdescription{
+    font-size: 1.3rem;
   }
 }
 

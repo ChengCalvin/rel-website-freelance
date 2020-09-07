@@ -55,16 +55,18 @@ export default function Home() {
         <meta name="HandheldFriendly" content="true" />
       </Head>
       <header className={styles.header}>
-        <img
-          style={{
-            width: "20%",
-            height: "25%",
-            padding: "0.5rem",
-            minWidth: "260px",
-          }}
-          src="images/relLogo.png"
-          alt="rel-Logo"
-        />
+        <Link href="/">
+          <img
+            style={{
+              width: "20%",
+              height: "25%",
+              padding: "0.5rem",
+              minWidth: "260px",
+            }}
+            src="images/relLogo.png"
+            alt="rel-Logo"
+          />
+        </Link>
         <NavMenu />
         <div className={styles.sidedrawerbtn}>
           <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
@@ -117,7 +119,7 @@ export default function Home() {
         <div className={styles.successstorybackground}>
           <div className={styles.successstorycontent}>
             <div className={styles.successstorytitle}>
-              REL REALTY ADVISOR IS PROUD TO PRESENT ITS FIRST PROJECT
+              REL REALTY ADVISORS IS PROUD TO PRESENT ITS FIRST PROJECT
             </div>
             <img
               className={styles.novatitle}

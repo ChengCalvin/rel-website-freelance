@@ -10,10 +10,12 @@ const FounderAchievement = (props) => {
             src={props.partner.profileImage}
             alt={props.partner.alt}
           />
-          <div className={styles.name}>{props.partner.name}</div>
-          <div>{props.partner.title1}</div>
-          <div>{props.partner.title2}</div>
-          <div>{props.partner.title3}</div>
+          <div className={styles.nametitlemobile}>
+            <div className={styles.name}>{props.partner.name}</div>
+            <div>{props.partner.title1}</div>
+            <div>{props.partner.title2}</div>
+            <div>{props.partner.title3}</div>
+          </div>
         </div>
         <div className={styles.verticalline}></div>
         <div className={styles.description}>
