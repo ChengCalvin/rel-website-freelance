@@ -96,8 +96,7 @@ const Partner = () => {
                 backdropClicked={drawerbtnClickedHandler}
               />
               <SideDrawer
-                showSideDrawer={drawerbtnActivated}
-                backdropClicked={drawerbtnClickedHandler}
+                closeMenuClicked={drawerbtnClickedHandler}
               />
             </>
           ) : null}

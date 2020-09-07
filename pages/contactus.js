@@ -80,8 +80,7 @@ const ContactUs = () => {
                 backdropClicked={drawerbtnClickedHandler}
               />
               <SideDrawer
-                showSideDrawer={drawerbtnActivated}
-                backdropClicked={drawerbtnClickedHandler}
+                closeMenuClicked={drawerbtnClickedHandler}
               />
             </>
           ) : null}

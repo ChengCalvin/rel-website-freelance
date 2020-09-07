@@ -1,6 +1,6 @@
 .navmenu {
   display: flex;
-  width: 390px;
+  width: 30rem;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -59,9 +59,46 @@
   z-index: 999;
 }
 
+.sidedrawer ul {
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .navmenutitle:hover {
   color: #01b98e;
   cursor: pointer;
+}
+
+.sidedrawermenu {
+  border-bottom: 1px solid #006a52;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+  list-style: none;
+  color: #006a52;
+}
+
+.closenavmenubtn {
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-bottom: 1px solid #006a52;
+  color: #006a52;
+  display: flex;
+}
+
+.closesymbol {
+  border: 1px solid #006a52;
+  border-radius: 15rem;
+  margin-right: 0.7rem;
+  padding: 0rem 0.3rem;
+}
+
+.closemenutext {
+  font-weight: 600;
 }
 
 @media (max-width: 767px) {

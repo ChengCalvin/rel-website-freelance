@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../../../styles/Layout.module.css";
 
-const SideDrawer = () => {
+const SideDrawer = (props) => {
   let menuContent = [
     { title: "HOME", link: "/" },
     { title: "ABOUT", link: "/about" },
@@ -10,9 +10,13 @@ const SideDrawer = () => {
   ];
   return (
     <div className={styles.sidedrawer}>
+      <div className={styles.closenavmenubtn} onClick={props.closeMenuClicked}>
+        <div className={styles.closesymbol}>x</div>
+        <div className={styles.closemenutext}>CLOSE MENU</div>
+      </div>
       <ul>
         {menuContent.map((menucontent, i) => (
-          <li>
+          <li className={styles.sidedrawermenu}>
             <Link href={menucontent.link}>
               <div className={styles.navmenutitle} key={i}>
                 {menucontent.title}
