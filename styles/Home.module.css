@@ -334,7 +334,7 @@
     width: 50%;
   }
   .successstorybackground {
-    height: 80rem;
+    height: 76rem;
   }
   .successstorycontent {
     padding-left: 24vw;
@@ -342,9 +342,15 @@
   }
 }
 
-@media (min-width: 1661px){
+@media (min-width: 1500px){
   .successstorybackground {
-    height: 85rem;
+    height: 82rem;
+  }
+}
+
+@media (min-width: 1715px){
+  .successstorybackground {
+    height: 87rem;
   }
 }
 
