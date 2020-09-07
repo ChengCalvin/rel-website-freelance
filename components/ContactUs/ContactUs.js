@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import styles from "../../styles/ContactUs.module.css";
+import DrawerButton from "../Layout/SideDrawer/DrawerButton/DrawerButton";
 
 let SERVICE_ID = "service_27cl4ij";
 let TEMPLATE_ID = "template_li3sjql";
@@ -20,6 +21,7 @@ const ContactUs = () => {
     clientEmail: "",
     message: "",
   });
+  let [buttonIsDisabled, setButtonIsDisabled] = useState(true);
 
   const onChangeHandler = (event) => {
     let value = event.target.value;
@@ -27,6 +29,21 @@ const ContactUs = () => {
     const client = clientMessage;
     client[name] = value;
     setClientMessage(client);
+    invalidFormHandler();
+  };
+
+  const invalidFormHandler = () => {
+    if (
+      clientMessage.firstName !== "" &&
+      clientMessage.lastName !== "" &&
+      clientMessage.clientEmail !== "" &&
+      clientMessage.clientEmail.indexOf("@") > -1 &&
+      clientMessage.message !== ""
+    ) {
+      setButtonIsDisabled(false);
+    } else {
+      setButtonIsDisabled(true);
+    }
   };
 
   const clientFormSubmitHandler = () => {
@@ -34,10 +51,9 @@ const ContactUs = () => {
       (response) => console.log("Success", response),
       (error) => console.log("Failed", error)
     );
-
     setClientMessage(initialClientMessage);
-
     clearInputField();
+    setButtonIsDisabled(true);
   };
 
   const clearInputField = () => {
@@ -47,6 +63,13 @@ const ContactUs = () => {
     document.getElementById("message").value = "";
   };
 
+  let submitButton = buttonIsDisabled ? (
+    <div className={styles.submitbtndisabled}>Submit</div>
+  ) : (
+    <div className={styles.submitbtn} onClick={clientFormSubmitHandler}>
+      Submit
+    </div>
+  );
   return (
     <div className={styles.contactus}>
       <div className={styles.contactustitle}>CONTACT US TODAY</div>
@@ -58,6 +81,7 @@ const ContactUs = () => {
             name="firstName"
             onChange={(e) => onChangeHandler(e)}
             id="firstName"
+            maxLength="26"
           />
         </div>
         <div className={styles.contactlastname}>
@@ -67,6 +91,7 @@ const ContactUs = () => {
             name="lastName"
             onChange={(e) => onChangeHandler(e)}
             id="lastName"
+            maxLength="26"
           />
         </div>
       </div>
@@ -77,6 +102,7 @@ const ContactUs = () => {
           name="clientEmail"
           onChange={(e) => onChangeHandler(e)}
           id="clientEmail"
+          maxLength="50"
         />
       </div>
       <div className={styles.contactmessage}>
@@ -104,9 +130,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className={styles.submitbtn} onClick={clientFormSubmitHandler}>
-        Submit
-      </div>
+      {submitButton}
     </div>
   );
 };
