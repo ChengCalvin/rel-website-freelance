@@ -291,7 +291,7 @@
     font-size: 3rem;
   }
   .successstorybackground {
-    height: 87rem;
+    height: 75rem;
   }
   .successstorycontent {
     padding-left: 10vw;
@@ -307,6 +307,12 @@
   }
   .novacontentdescription{
     font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 920px){
+  .successstorybackground{
+    height: 82rem;
   }
 }
 
@@ -327,8 +333,23 @@
   .founderscontainer {
     width: 50%;
   }
+  .successstorybackground {
+    height: 80rem;
+  }
   .successstorycontent {
     padding-left: 24vw;
     padding-right: 24vw;
+  }
+}
+
+@media (min-width: 1661px){
+  .successstorybackground {
+    height: 85rem;
+  }
+}
+
+@media(min-width: 1900px) {
+  .successstorybackground{
+    height: 95rem;
   }
 }
