@@ -33,7 +33,7 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         {/* website tab title */}
-        <title> REL REALTY ADVISOR</title>
+        <title> REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"

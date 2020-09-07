@@ -36,7 +36,7 @@ const ContactUs = () => {
     <div className={styles.container}>
       <Head>
         {/* website tab title */}
-        <title>Contact Us | REL REALTY ADVISOR</title>
+        <title>Contact Us | REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
