@@ -40,8 +40,10 @@
   margin: 2rem 2rem 2rem 0rem;
   white-space: pre-line;
   text-align: justify;
+  text-align-last: start;
   line-height: 1.5rem;
 }
+
 .achievemnttitle {
   color: #006a52;
   font-weight: 600;
