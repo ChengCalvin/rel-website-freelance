@@ -19,7 +19,11 @@ const FounderAchievement = (props) => {
         </div>
         <div className={styles.verticalline}></div>
         <div className={styles.description}>
-          {props.partner.description}
+          {props.partner.description.map((description, i) => (
+            <div className={styles.descriptionparagraph} key={i}>
+              {description}
+            </div>
+          ))}
           <div className={styles.achievemnttitle}>
             {props.partner.achievementSubtitle}
           </div>
