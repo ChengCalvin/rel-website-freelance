@@ -14,6 +14,17 @@
   padding-right: 24vw;
 }
 
+.headerlogo {
+  width: 20%;
+  height: 25%;
+  padding: 0.5rem;
+  min-width: 260px;
+}
+
+.headerlogo:hover {
+  cursor: pointer;
+}
+
 .main {
   flex: 1;
   display: flex;
@@ -41,7 +52,7 @@
 .contactuscontainer {
   background-color: rgb(156, 156, 156);
   width: 100%;
-  height: 45rem;
+  height: 46rem;
   margin-top: 2rem;
   color: white;
 }
@@ -92,7 +103,7 @@
     display: flex;
     align-items: center;
   }
-  .foundercontactcontainer{
+  .foundercontactcontainer {
     padding-left: 3vw;
     padding-right: 3vw;
   }
@@ -102,7 +113,7 @@
   .sidedrawerbtn {
     display: none;
   }
-  .foundercontactcontainer{
+  .foundercontactcontainer {
     padding-left: 10vw;
     padding-right: 10vw;
   }
@@ -120,7 +131,7 @@
     padding-left: 24vw;
     padding-right: 24vw;
   }
-  .foundercontactcontainer{
+  .foundercontactcontainer {
     padding-left: 24vw;
     padding-right: 24vw;
   }

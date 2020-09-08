@@ -14,6 +14,17 @@
   padding-right: 24vw;
 }
 
+.headerlogo {
+  width: 20%;
+  height: 25%;
+  padding: 0.5rem;
+  min-width: 260px;
+}
+
+.headerlogo:hover {
+  cursor: pointer;
+}
+
 .main {
   flex: 1;
   display: flex;
@@ -64,7 +75,7 @@
 .contactuscontainer {
   background-color: rgb(156, 156, 156);
   width: 100%;
-  height: 45rem;
+  height: 46rem;
   margin-top: 2rem;
   color: white;
 }

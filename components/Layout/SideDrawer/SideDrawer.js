@@ -6,7 +6,7 @@ const SideDrawer = (props) => {
     { title: "HOME", link: "/" },
     { title: "ABOUT", link: "/about" },
     { title: "PARTNER", link: "/partner" },
-    { title: "CONTACT US", link: "contactus" },
+    { title: "CONTACT US", link: "contact-us" },
   ];
   return (
     <div className={styles.sidedrawer}>

@@ -76,12 +76,7 @@ const Partner = () => {
       <header className={styles.header}>
         <Link href="/">
           <img
-            style={{
-              width: "20%",
-              height: "25%",
-              padding: "0.5rem",
-              minWidth: "260px",
-            }}
+            className={styles.headerlogo}
             src="images/relLogo.png"
             alt="rel-Logo"
           />
@@ -95,9 +90,7 @@ const Partner = () => {
                 showBackdrop={drawerbtnActivated}
                 backdropClicked={drawerbtnClickedHandler}
               />
-              <SideDrawer
-                closeMenuClicked={drawerbtnClickedHandler}
-              />
+              <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
             </>
           ) : null}
         </div>
@@ -129,7 +122,7 @@ const Partner = () => {
 
       <footer className={styles.footer}>
         <div className={styles.footeremail}>info@relra.com</div>
-        <div className={styles.footercopyright}>&copy; REL REALTY ADVISOR</div>
+        <div className={styles.footercopyright}>&copy; REL REALTY ADVISORS</div>
       </footer>
     </div>
   );

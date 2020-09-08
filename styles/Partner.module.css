@@ -14,6 +14,17 @@
   padding-right: 24vw;
 }
 
+.headerlogo {
+  width: 20%;
+  height: 25%;
+  padding: 0.5rem;
+  min-width: 260px;
+}
+
+.headerlogo:hover {
+  cursor: pointer;
+}
+
 .main {
   flex: 1;
   display: flex;
@@ -39,15 +50,15 @@
 }
 
 .foundingpartnercontainer {
-  padding-left: 3vw;
-  padding-right: 3vw;
+  padding-left: 8vw;
+  padding-right: 8vw;
 }
 
 .foundingpartnertitle {
   width: 100%;
   margin: 2rem 0rem;
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
   color: #006a52;
@@ -119,7 +130,7 @@
   .sidedrawerbtn {
     display: none;
   }
-  .foundingpartnertitle{
+  .foundingpartnertitle {
     font-size: 3rem;
   }
   .foundingpartnercontainer {

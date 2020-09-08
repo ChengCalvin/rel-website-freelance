@@ -57,12 +57,7 @@ export default function Home() {
       <header className={styles.header}>
         <Link href="/">
           <img
-            style={{
-              width: "20%",
-              height: "25%",
-              padding: "0.5rem",
-              minWidth: "260px",
-            }}
+            className={styles.headerlogo}
             src="images/relLogo.png"
             alt="rel-Logo"
           />
@@ -76,9 +71,7 @@ export default function Home() {
                 showBackdrop={drawerbtnActivated}
                 backdropClicked={drawerbtnClickedHandler}
               />
-              <SideDrawer
-                closeMenuClicked={drawerbtnClickedHandler}
-              />
+              <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
             </>
           ) : null}
         </div>
@@ -108,10 +101,13 @@ export default function Home() {
             src="images/foundersection.jpg"
             style={{ width: "100%", height: "100%", zIndex: "2" }}
           />
-          <div className={styles.foundersectionoverlay}></div>
-          <div className={styles.founderscontainer}>
-            <div className={styles.founderpartnertitle}>FOUNDING PARTNERS</div>
-            <FounderDisplay founders={founders} />
+          <div className={styles.foundersectionoverlay}>
+            <div className={styles.founderscontainer}>
+              <div className={styles.founderpartnertitle}>
+                FOUNDING PARTNERS
+              </div>
+              <FounderDisplay founders={founders} />
+            </div>
           </div>
         </div>
 
@@ -122,7 +118,7 @@ export default function Home() {
             </div>
             <img
               className={styles.novatitle}
-              src="/images/novatitleimage.JPG"
+              src="/images/novatitleimage.png"
             />
             <div className={styles.novacontenttitle}>
               A LAKEFRONT EXCLUSIVE COMMUNITY OF ONLY 8 LUXURY RESIDENCES ON
@@ -154,7 +150,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <div className={styles.footeremail}>info@relra.com</div>
-        <div className={styles.footercopyright}>&copy; REL REALTY ADVISOR</div>
+        <div className={styles.footercopyright}>&copy; REL REALTY ADVISORS</div>
       </footer>
     </div>
   );

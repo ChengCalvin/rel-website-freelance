@@ -55,24 +55,32 @@
   }
   .profilepicandtitle {
     flex-direction: row;
+    margin-left: 8vw;
+    margin-right: 8vw;
   }
   .name {
     margin-top: 0rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     width: 10rem;
   }
   .nametitlemobile {
     margin-left: 1.4rem;
-    font-size: 0.66rem;
+    font-size: 0.64rem;
   }
   .verticalline {
     border-bottom: 2px solid #006a52;
-    margin: 0rem 3vw 0rem 3vw;
+    margin: 0rem 8vw 0rem 8vw;
+  }
+  .achievemnttitle {
+    font-size: 1.15rem;
   }
   .description {
     width: 100%;
-    padding-left: 3vw;
-    padding-right: 3vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    font-size: 0.7rem;
   }
-  
+  .achievementlistitem {
+    text-align: left;
+  }
 }
