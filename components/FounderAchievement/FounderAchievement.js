@@ -19,14 +19,16 @@ const FounderAchievement = (props) => {
         </div>
         <div className={styles.verticalline}></div>
         <div className={styles.description}>
-          <div>{props.partner.description}</div>
+          {props.partner.description}
           <div className={styles.achievemnttitle}>
             {props.partner.achievementSubtitle}
           </div>
           <div>
             <ul>
               {props.partner.allAchievements?.map((achievement, i) => (
-                <li key={i}>{achievement}</li>
+                <li className={styles.achievementlistitem} key={i}>
+                  {achievement}
+                </li>
               ))}
             </ul>
           </div>
