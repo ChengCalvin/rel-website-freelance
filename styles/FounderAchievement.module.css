@@ -40,14 +40,8 @@
   margin: 2rem 2rem 2rem 0rem;
   white-space: pre-line;
   text-align: justify;
-  text-align-last: justify;
+  text-align-last: left;
   line-height: 1.5rem;
-}
-
-.description:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
 }
 
 .achievemnttitle {
