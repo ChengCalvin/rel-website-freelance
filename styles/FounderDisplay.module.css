@@ -30,14 +30,14 @@
 }
 
 @media (min-width: 320px) {
-  .allfounder{
+  .allfounder {
     margin-top: 1rem;
   }
   .foundercontainer {
     max-width: 50%;
   }
-  .foundername{
-    font-size: 1rem;
+  .foundername {
+    font-size: 0.8rem;
   }
   .founderpartnertitle {
     font-weight: 900;
@@ -49,11 +49,11 @@
 }
 
 @media (min-width: 768px) {
-  .allfounder{
+  .allfounder {
     margin-top: 2rem;
   }
-  .foundername{
-    font-size: 2rem;
+  .foundername {
+    font-size: 1.5rem;
   }
   .founderpartnertitle {
     font-weight: 900;
