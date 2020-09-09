@@ -87,6 +87,9 @@
     padding-right: 8vw;
     font-size: 0.7rem;
   }
+}
+
+@media (max-width: 1199px) {
   .achievementlistitem {
     text-align: left;
   }
