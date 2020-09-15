@@ -296,8 +296,11 @@
   .foundersection {
     height: 500px;
   }
-  .successstorybackground {
+  .successstorybackground:lang(en) {
     height: 70rem;
+  }
+  .successstorybackground:lang(fr){
+    height: 80rem;
   }
   .successstorycontent {
     padding-left: 5vw;
@@ -309,8 +312,24 @@
   .novacontenttitle {
     font-size: 1.5rem;
   }
-  .novacontentdescription {
+  .novacontentdescription:lang(en) {
     font-size: 1.1rem;
+  }
+  .novacontentdescription:lang(fr){
+    font-size: 0.9rem;
+  }
+}
+
+@media(max-width: 350px){
+  .headerlogo{
+    min-width: 200px;
+    width: 10%;
+  }
+}
+
+@media(min-width: 880px){
+  .sidedrawerbtn:lang(fr){
+    display: none;
   }
 }
 
@@ -319,7 +338,7 @@
     padding-left: 10vw;
     padding-right: 10vw;
   }
-  .sidedrawerbtn {
+  .sidedrawerbtn:lang(en) {
     display: none;
   }
   .pagetitlelogocontent {
@@ -393,7 +412,7 @@
     width: 50%;
   }
   .successstorybackground {
-    height: 76rem;
+    height: 90rem;
   }
   .successstorycontent {
     padding-left: 24vw;
@@ -408,13 +427,16 @@
 }
 
 @media (min-width: 1715px) {
-  .successstorybackground {
+  .successstorybackground:lang(en) {
     height: 87rem;
+  }
+  .successstorybackground:lang(fr){
+    height: 95rem;
   }
 }
 
-@media (min-width: 2030px) {
-  .successstorybackground {
-    height: 95rem;
+@media (min-width: 1980px) {
+  .successstorybackground:lang(en) {
+    height: 100rem;
   }
 }

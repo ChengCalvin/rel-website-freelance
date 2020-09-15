@@ -1,16 +1,15 @@
 import { useState } from "react";
 import Head from "next/head";
 import NavMenu from "../components/Layout/NavMenu";
-import styles from "../styles/ContactUsPage.module.css";
+import styles from "../styles/About.module.css";
 import DrawerButton from "../components/Layout/SideDrawer/DrawerButton/DrawerButton";
 import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
-import FounderDisplay from "../components/FoundersDisplay/FounderDisplay";
-import ContactUsSection from "../components/ContactUs/ContactUs";
+import ContactUs from "../components/ContactUs/ContactUs";
 import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
 
-const ContactUs = ({ t }) => {
+const About = ({ t }) => {
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
   let [openLanguageMenu, setOpenLanguageMenu] = useState(false);
 
@@ -28,23 +27,6 @@ const ContactUs = ({ t }) => {
     setOpenLanguageMenu((openLanguageMenu) => !openLanguageMenu);
   };
 
-  let founders = [
-    {
-      name: "HERBERT RASTCH",
-      email: "herbert@relra.com",
-      phone: "C: 819-429-9019",
-      cellphone: "C: 514-884-8269",
-      tollfree: "TF: 1-866-681-7557",
-    },
-    {
-      name: "ALEXANDRE ETHIER",
-      email: "alexandre@relra.com",
-      cellphone: "C: 450-675-2566",
-    },
-  ];
-
-  let verticalLineColor = "#006a52";
-
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
@@ -52,7 +34,7 @@ const ContactUs = ({ t }) => {
     <div className={styles.container}>
       <Head>
         {/* website tab title */}
-        <title>Contact Us | REL REALTY ADVISORS</title>
+        <title>A Propos | REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
@@ -133,18 +115,26 @@ const ContactUs = ({ t }) => {
           </div>
         </div>
       </header>
+
       <main className={styles.main}>
         <div className={styles.pagetitle}>
-          <div className={styles.pagetitletextcontent}>CONTACT US</div>
+          <div className={styles.pagetitletextcontent}>{t("ABOUT")}</div>
         </div>
-        <div className={styles.foundercontactcontainer}>
-          <FounderDisplay
-            founders={founders}
-            verticalLineColor={verticalLineColor}
-          />
+        <div className={styles.abouttextcontainer}>
+          <div className={styles.abouttext1}>
+            <div>&ldquo;</div>
+            {t("aboutquoteparagraph")}
+            <>&rdquo;</>
+          </div>
+          <div className={styles.abouttext2}>
+            {t("aboutparagraph2")}
+            <br />
+            <br />
+            {t("aboutparagraph3")}
+          </div>
         </div>
         <div className={styles.contactuscontainer}>
-          <ContactUsSection />
+          <ContactUs />
         </div>
       </main>
 
@@ -156,12 +146,12 @@ const ContactUs = ({ t }) => {
   );
 };
 
-ContactUs.getInitialProps = async () => ({
+About.getInitialProps = async () => ({
   namespacesRequired: ["common"],
 });
 
-ContactUs.PropsTypes = {
+About.PropsTypes = {
   t: PropsTypes.func.isRequired,
 };
 
-export default withTranslation("common")(ContactUs);
+export default withTranslation("common")(About);

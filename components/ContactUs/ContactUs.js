@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import emailjs from "emailjs-com";
 import styles from "../../styles/ContactUs.module.css";
-import DrawerButton from "../Layout/SideDrawer/DrawerButton/DrawerButton";
+import { withTranslation, i18n, Trans } from "..../../../i18n";
+import PropsTypes from "prop-types";
 
 let SERVICE_ID = "service_27cl4ij";
 let TEMPLATE_ID = "template_li3sjql";
@@ -14,7 +15,7 @@ let initialClientMessage = {
   message: "",
 };
 
-const ContactUs = () => {
+const ContactUs = ({ t }) => {
   let [clientMessage, setClientMessage] = useState({
     firstName: "",
     lastName: "",
@@ -64,18 +65,18 @@ const ContactUs = () => {
   };
 
   let submitButton = buttonIsDisabled ? (
-    <div className={styles.submitbtndisabled}>Submit</div>
+    <div className={styles.submitbtndisabled}>{t("Submit")}</div>
   ) : (
     <div className={styles.submitbtn} onClick={clientFormSubmitHandler}>
-      Submit
+      {t("Submit")}
     </div>
   );
   return (
     <div className={styles.contactus}>
-      <div className={styles.contactustitle}>CONTACT US TODAY</div>
+      <div className={styles.contactustitle}>{t("CONTACT US TODAY")}</div>
       <div className={styles.contactname}>
         <div className={styles.contactfirstname}>
-          <div>First Name</div>
+          <div>{t("First Name")}</div>
           <input
             type="text"
             name="firstName"
@@ -85,7 +86,7 @@ const ContactUs = () => {
           />
         </div>
         <div className={styles.contactlastname}>
-          <div>Last Name</div>
+          <div>{t("Last Name")}</div>
           <input
             type="text"
             name="lastName"
@@ -96,7 +97,7 @@ const ContactUs = () => {
         </div>
       </div>
       <div className={styles.contactemail}>
-        <div>Email</div>
+        <div>{t("Email")}</div>
         <input
           type="text"
           name="clientEmail"
@@ -106,7 +107,7 @@ const ContactUs = () => {
         />
       </div>
       <div className={styles.contactmessage}>
-        <div>Comment or Message</div>
+        <div>{t("Comment or Message")}</div>
         <textarea
           type="text"
           name="message"
@@ -118,7 +119,10 @@ const ContactUs = () => {
       <div className={styles.contactemailscontainer}>
         <div className={styles.relcontactemail1}>
           <div className={styles.contactperson}>
-            <b>General Inquiries:</b> info@relra.com
+            <Trans i18nKey="translation">
+              <strong >General Inquiries: </strong>
+            </Trans>
+            info@relra.com
           </div>
           <div className={styles.contactperson}>
             <b>Alexandre Ethier:</b> alexandre@relra.com
@@ -135,4 +139,12 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+ContactUs.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
+ContactUs.PropsTypes = {
+  t: PropsTypes.func.isRequired,
+};
+
+export default withTranslation("common")(ContactUs);

@@ -1,24 +1,34 @@
-import Link from "next/link";
 import styles from "../../styles/Layout.module.css";
-import { withTranslation, i18n } from "../../i18n";
+import { withTranslation, i18n, Link } from "../../i18n";
+import PropsTypes from "prop-types";
 
-let menuContent = [
-  { title: "HOME", link: "/" },
-  { title: "ABOUT", link: "/about" },
-  { title: "PARTNER", link: "/partner" },
-  { title: "CONTACT US", link: "/contact-us" },
-];
 
-const NavMenu = () => (
-  <div className={styles.navmenu}>
-    {menuContent.map((menucontent, i) => (
-      <Link href={menucontent.link} key={i} as={menucontent.link}>
-        <div className={styles.navmenutitle} key={i}>
-          {menucontent.title}
-        </div>
-      </Link>
-    ))}
-  </div>
-);
+const NavMenu = ({ t }) => {
+  let menuContent = [
+    { title: t("HOME"), link: "/" },
+    { title: t("ABOUT"), link: t("/about") },
+    { title: t("PARTNERS"), link: t("/partners") },
+    { title: t("CONTACT US"), link: t("/contact-us") },
+  ];
+  return (
+    <div className={styles.navmenu} lang={i18n.language}>
+      {menuContent.map((menucontent, i) => (
+        <Link href={menucontent.link} key={i} as={menucontent.link}>
+          <div className={styles.navmenutitle} key={i}>
+            {menucontent.title}
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+};
 
-export default NavMenu;
+NavMenu.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
+NavMenu.PropsTypes = {
+  t: PropsTypes.func.isRequired,
+};
+
+export default withTranslation("common")(NavMenu);

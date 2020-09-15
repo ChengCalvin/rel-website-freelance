@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from "next/link";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavMenu from "../components/Layout/NavMenu";
@@ -8,7 +7,7 @@ import DrawerButton from "../components/Layout/SideDrawer/DrawerButton/DrawerBut
 import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import ContactUs from "../components/ContactUs/ContactUs";
-import { withTranslation, i18n } from "../i18n";
+import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
 
 function Home({ t }) {
@@ -79,7 +78,7 @@ function Home({ t }) {
             alt="rel-Logo"
           />
         </Link>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", width: "fit-content" }}>
           <NavMenu />
           <div
             style={{
@@ -95,7 +94,10 @@ function Home({ t }) {
               className={styles.languagemenubtncontainer}
               onClick={languageMenuHandler}
             >
-              <div className={styles.languagemenubtn}></div>
+              <div
+                className={styles.languagemenubtn}
+                lang={i18n.language}
+              ></div>
             </div>
             {openLanguageMenu ? (
               <div className={styles.languagecontainer}>
@@ -114,19 +116,18 @@ function Home({ t }) {
               </div>
             ) : null}
           </div>
-        </div>
-
-        <div className={styles.sidedrawerbtn}>
-          <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
-          {drawerbtnActivated ? (
-            <>
-              <Backdrop
-                showBackdrop={drawerbtnActivated}
-                backdropClicked={drawerbtnClickedHandler}
-              />
-              <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
-            </>
-          ) : null}
+          <div className={styles.sidedrawerbtn}>
+            <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
+            {drawerbtnActivated ? (
+              <>
+                <Backdrop
+                  showBackdrop={drawerbtnActivated}
+                  backdropClicked={drawerbtnClickedHandler}
+                />
+                <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
+              </>
+            ) : null}
+          </div>
         </div>
       </header>
 
@@ -156,7 +157,7 @@ function Home({ t }) {
           </div>
         </div>
 
-        <div className={styles.successstorybackground}>
+        <div className={styles.successstorybackground} lang={i18n.language}>
           <div className={styles.successstorycontent}>
             <div className={styles.successstorytitle}>
               {t("REL REALTY ADVISORS IS PROUD TO PRESENT ITS FIRST PROJECT")}
@@ -171,12 +172,7 @@ function Home({ t }) {
               )}
             </div>
             <div className={styles.novacontentdescription}>
-              NOVA Tremblant is an exclusive project of 8 newly built private
-              and luxurious residences on the shore of Lake Tremblant with
-              breathtaking views of the Mont-Tremblant mountain. This perfectly
-              located gated and prestigious community is the ultimate property
-              for privacy, serene nature and endless year-round outdoor
-              activities.
+              {t("Novaparagraph")}
             </div>
             <img
               className={styles.novacontentimage}
@@ -184,7 +180,9 @@ function Home({ t }) {
             />
             <div className={styles.discovernovabtn}>
               <Link href="https://novatremblant.com/">
-                <div className={styles.discovernovabtntext}>DISCOVER NOVA</div>
+                <div className={styles.discovernovabtntext}>
+                  {t("DISCOVER NOVA")}
+                </div>
               </Link>
             </div>
           </div>

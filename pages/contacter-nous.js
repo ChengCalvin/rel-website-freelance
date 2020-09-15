@@ -52,7 +52,7 @@ const ContactUs = ({ t }) => {
     <div className={styles.container}>
       <Head>
         {/* website tab title */}
-        <title>Contact Us | REL REALTY ADVISORS</title>
+        <title>Contacter Nous | REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
@@ -135,7 +135,7 @@ const ContactUs = ({ t }) => {
       </header>
       <main className={styles.main}>
         <div className={styles.pagetitle}>
-          <div className={styles.pagetitletextcontent}>CONTACT US</div>
+          <div className={styles.pagetitletextcontent}>{t("CONTACT US")}</div>
         </div>
         <div className={styles.foundercontactcontainer}>
           <FounderDisplay

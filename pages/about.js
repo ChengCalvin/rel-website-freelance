@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Link from "next/link";
 import Head from "next/head";
 import NavMenu from "../components/Layout/NavMenu";
 import styles from "../styles/About.module.css";
@@ -7,11 +6,26 @@ import DrawerButton from "../components/Layout/SideDrawer/DrawerButton/DrawerBut
 import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import ContactUs from "../components/ContactUs/ContactUs";
-import { withTranslation, i18n } from "../i18n";
+import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
 
-const About = () => {
+const About = ({ t }) => {
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+  let [openLanguageMenu, setOpenLanguageMenu] = useState(false);
+
+  const changeToFrenchLanguage = () => {
+    if (i18n.language === "en") i18n.changeLanguage("fr");
+    languageMenuHandler();
+  };
+
+  const changeToEnglishLanguage = () => {
+    if (i18n.language === "fr") i18n.changeLanguage("en");
+    languageMenuHandler();
+  };
+
+  const languageMenuHandler = () => {
+    setOpenLanguageMenu((openLanguageMenu) => !openLanguageMenu);
+  };
 
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
@@ -49,54 +63,75 @@ const About = () => {
             alt="rel-Logo"
           />
         </Link>
-        <NavMenu />
-        <div className={styles.sidedrawerbtn}>
-          <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
-          {drawerbtnActivated ? (
-            <>
-              <Backdrop
-                showBackdrop={drawerbtnActivated}
-                backdropClicked={drawerbtnClickedHandler}
-              />
-              <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
-            </>
-          ) : null}
+
+        <div style={{ display: "flex", width: "fit-content" }}>
+          <NavMenu />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "1rem",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "relative",
+            }}
+          >
+            <div
+              className={styles.languagemenubtncontainer}
+              onClick={languageMenuHandler}
+            >
+              <div
+                className={styles.languagemenubtn}
+                lang={i18n.language}
+              ></div>
+            </div>
+            {openLanguageMenu ? (
+              <div className={styles.languagecontainer}>
+                <div
+                  className={styles.languagebtn}
+                  onClick={changeToFrenchLanguage}
+                >
+                  FR
+                </div>
+                <div
+                  className={styles.languagebtn}
+                  onClick={changeToEnglishLanguage}
+                >
+                  EN
+                </div>
+              </div>
+            ) : null}
+          </div>
+          <div className={styles.sidedrawerbtn}>
+            <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
+            {drawerbtnActivated ? (
+              <>
+                <Backdrop
+                  showBackdrop={drawerbtnActivated}
+                  backdropClicked={drawerbtnClickedHandler}
+                />
+                <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
+              </>
+            ) : null}
+          </div>
         </div>
       </header>
+
       <main className={styles.main}>
         <div className={styles.pagetitle}>
-          <div className={styles.pagetitletextcontent}>ABOUT</div>
+          <div className={styles.pagetitletextcontent}>{t("ABOUT")}</div>
         </div>
         <div className={styles.abouttextcontainer}>
           <div className={styles.abouttext1}>
             <div>&ldquo;</div>
-            REL Realty Advisors company is not a development company in the
-            traditional sense of the word. They are facilitators who bring
-            innovative ideas, best practices and the best professionals together
-            to conceive and then to support a specific approach to a real estate
-            development project that accomplishes the owner&rsquo;s stated
-            objective.&rdquo;
+            {t("aboutquoteparagraph")}
+            <>&rdquo;</>
           </div>
           <div className={styles.abouttext2}>
-            They help develop an ethic around a project following objectives,
-            business culture and financial imperatives of the owner. They then
-            build a team that can support and defend that ethic in which the
-            required disciplines, exacting the highest creativity and
-            resourcefulness of the best professionals, are applied to see the
-            project through to successful completion, whether that completion is
-            the development of a new project, acquisition of new assets,
-            repositioning and redevelopment of an existing property. They then
-            build a team that can support and defend that ethic with the highest
-            creativity and resourcefulness of the best professionals, and make
-            sure it is applied through the successful completion of a project,
-            whether that completion is the development of a new project,
-            acquisition of new assets, repositioning or redevelopment of an
-            existing property.
+            {t("aboutparagraph2")}
             <br />
             <br />
-            REL Realty Advisors functions as a trusted advisor, fiduciary,
-            gatekeeper and eyes, ears and voice of the owner from conception to
-            occupancy, to operation, or to disposition.
+            {t("aboutparagraph3")}
           </div>
         </div>
         <div className={styles.contactuscontainer}>
