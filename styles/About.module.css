@@ -127,6 +127,10 @@
   color: white;
 }
 
+.contactuscontainer:lang(fr){
+  height: 50rem;
+}
+
 .footer {
   width: 100%;
   border-top: 1px solid #eaeaea;
@@ -166,16 +170,24 @@
     display: flex;
     align-items: center;
   }
+  .abouttext1:lang(fr) {
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  .abouttext2:lang(fr){
+    font-size: 0.85rem;
+  }
 }
-@media(max-width: 350px){
-  .headerlogo{
+
+@media (max-width: 350px) {
+  .headerlogo {
     min-width: 200px;
     width: 10%;
   }
 }
 
-@media(min-width: 880px){
-  .sidedrawerbtn:lang(fr){
+@media (min-width: 880px) {
+  .sidedrawerbtn:lang(fr) {
     display: none;
   }
 }
@@ -189,11 +201,18 @@
     padding-left: 10vw;
     padding-right: 10vw;
   }
+  .abouttext1:lang(fr) {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
   .sidedrawerbtn:lang(en) {
     display: none;
   }
   .contactuscontainer {
     height: 40rem;
+  }
+  .contactuscontainer:lang(fr){
+    height: 42rem;  
   }
 }
 
@@ -205,5 +224,8 @@
   .abouttextcontainer {
     padding-left: 24vw;
     padding-right: 24vw;
+  }
+  .contactuscontainer:lang(fr){
+    height: 44rem;
   }
 }

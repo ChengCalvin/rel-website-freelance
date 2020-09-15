@@ -121,7 +121,7 @@ const About = ({ t }) => {
           <div className={styles.pagetitletextcontent}>{t("ABOUT")}</div>
         </div>
         <div className={styles.abouttextcontainer}>
-          <div className={styles.abouttext1}>
+          <div className={styles.abouttext1} lang={i18n.language}>
             <div>&ldquo;</div>
             {t("aboutquoteparagraph")}
             <>&rdquo;</>

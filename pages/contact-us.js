@@ -135,7 +135,7 @@ const ContactUs = ({ t }) => {
       </header>
       <main className={styles.main}>
         <div className={styles.pagetitle}>
-          <div className={styles.pagetitletextcontent}>CONTACT US</div>
+          <div className={styles.pagetitletextcontent}>{t("CONTACT US")}</div>
         </div>
         <div className={styles.foundercontactcontainer}>
           <FounderDisplay

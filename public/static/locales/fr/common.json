@@ -16,8 +16,8 @@
   "PARTNERS": "PARTENAIRES",
   "Partners": "Partenaires",
   "/partners": "/partenaires",
-  "CONTACT US": "CONTACTER NOUS",
-  "/contact-us": "/contacter-nous",
+  "CONTACT US": "CONTACTEZ-NOUS",
+  "/contact-us": "/contactez-nous",
   "aboutquoteparagraph": "REL Conseillers Immobiliers n’est pas une entreprise conventionnelle de développement. C’est une équipe chevronnée de facilitateurs qui contribue à l’émergence d’idées novatrices et qui propose les meilleures approches afin de réaliser les ambitions du propriétaire.",
   "aboutparagraph2": "Pour chaque projet, une éthique de travail est assurée à tous les niveaux:  respect de la culture d’entreprise et des enjeux financiers, tout en respectant les objectifs ciblés. Une équipe des meilleurs professionnels est mise en place et œuvre avec ces exigences, que ce soit au niveau de la conception, du développement de nouveaux projets, d’achat de propriétés existantes, leur reconfiguration et leur réaménagement.",
   "aboutparagraph3": "REL assume un rôle de confiance comme conseiller, fiduciaire et veille stratégique pour le propriétaire tout au long du processus d’élaboration du projet: de la conception, l’occupation, l’opérationnalisation, jusqu’à l’orientation de la propriété.",
@@ -42,5 +42,6 @@
   "achievement3": "Analyse, assemblage et concrétisation de plus de 700 estimations et soumissions en excavation, génie civil et bâtiments résidentiels, totalisant une valeur de plus de 400 M$;",
   "achievement4": "Élaboration et mise en œuvre d’un programme de prévention de la santé, de la sécurité et d’un système de gestion de qualité conduisant à l’accréditation ISO 9001;",
   "achievement5": "Gestion et construction de plus de 30 immeubles résidentiels;",
-  "achievement6": "Réalisation de plusieurs projets de gestion dans d’autres compagnies d’informatique (conception et implantation du plus grand réseau de kiosques transactionnels libre-service en Ontario, TERANET);"
+  "achievement6": "Réalisation de plusieurs projets de gestion dans d’autres compagnies d’informatique (conception et implantation du plus grand réseau de kiosques transactionnels libre-service en Ontario, TERANET);",
+  "CLOSE MENU": "FERMER"
 }

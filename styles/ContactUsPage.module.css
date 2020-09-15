@@ -103,6 +103,11 @@
   margin-top: 2rem;
   color: white;
 }
+
+.contactuscontainer:lang(fr){
+  height: 50rem;
+}
+
 .foundercontactcontainer {
   width: 100%;
   color: #006a52;
@@ -155,10 +160,18 @@
     padding-right: 3vw;
   }
 }
+
 @media(max-width: 350px){
   .headerlogo{
     min-width: 200px;
     width: 10%;
+  }
+}
+
+@media (max-width: 600px){
+  .pagetitletextcontent:lang(fr){
+    font-size: 2.5rem;
+    text-align: center;
   }
 }
 
@@ -179,6 +192,9 @@
   .contactuscontainer {
     height: 40rem;
   }
+  .contactuscontainer:lang(fr){
+    height: 44rem;  
+  }
 }
 
 @media (min-width: 1200px) {
@@ -193,5 +209,8 @@
   .foundercontactcontainer {
     padding-left: 24vw;
     padding-right: 24vw;
+  }
+  .contactuscontainer:lang(fr){
+    height: 44rem;
   }
 }

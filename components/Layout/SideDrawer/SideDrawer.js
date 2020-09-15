@@ -1,18 +1,20 @@
-import Link from "next/link";
 import styles from "../../../styles/Layout.module.css";
+import { withTranslation, Link } from "../../../i18n";
+import i18next from 'i18next'
+import PropsTypes from "prop-types";
 
 const SideDrawer = (props) => {
   let menuContent = [
-    { title: "HOME", link: "/" },
-    { title: "ABOUT", link: "/about" },
-    { title: "PARTNER", link: "/partner" },
-    { title: "CONTACT US", link: "contact-us" },
+    { title: i18next.t("HOME"), link: "/" },
+    { title: i18next.t("ABOUT"), link: i18next.t("/about") },
+    { title: i18next.t("PARTNER"), link: i18next.t("/partner") },
+    { title: i18next.t("CONTACT US"), link: i18next.t("contact-us") },
   ];
   return (
     <div className={styles.sidedrawer}>
       <div className={styles.closenavmenubtn} onClick={props.closeMenuClicked}>
         <div className={styles.closesymbol}>x</div>
-        <div className={styles.closemenutext}>CLOSE MENU</div>
+        <div className={styles.closemenutext}>{i18next.t("CLOSE MENU")}</div>
       </div>
       <ul>
         {menuContent.map((menucontent, i) => (
@@ -29,4 +31,12 @@ const SideDrawer = (props) => {
   );
 };
 
-export default SideDrawer;
+SideDrawer.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
+SideDrawer.PropsTypes = {
+  t: PropsTypes.func.isRequired,
+};
+
+export default withTranslation("common")(SideDrawer);
