@@ -7,6 +7,8 @@ import DrawerButton from "../components/Layout/SideDrawer/DrawerButton/DrawerBut
 import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import FounderAchievement from "../components/FounderAchievement/FounderAchievement";
+import { withTranslation, i18n } from "../i18n";
+import PropsTypes from "prop-types";
 
 const Partner = () => {
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
@@ -135,4 +137,12 @@ const Partner = () => {
   );
 };
 
-export default Partner;
+Partner.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
+Partner.PropsTypes = {
+  t: PropsTypes.func.isRequired,
+};
+
+export default withTranslation("common")(Partner);

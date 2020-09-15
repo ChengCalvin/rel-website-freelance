@@ -8,27 +8,44 @@ import DrawerButton from "../components/Layout/SideDrawer/DrawerButton/DrawerBut
 import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import ContactUs from "../components/ContactUs/ContactUs";
+import { withTranslation, i18n } from "../i18n";
+import PropsTypes from "prop-types";
 
-let founders = [
-  {
-    name: "HERBERT RASTCH",
-    title1: "Partner at REL Realty Advisors",
-    title2: "President at Herbie Holdings",
-    title3: "Certified Real Estate Broker",
-  },
-  {
-    name: "ALEXANDRE ETHIER",
-    title1: "Partner at REL Realty Advisor",
-    title2: "President and Project Director at COGERCO",
-  },
-];
-
-export default function Home() {
+function Home({ t }) {
+  let founders = [
+    {
+      name: "HERBERT RASTCH",
+      title1: t("Partner at REL Realty Advisors"),
+      title2: t("President at Herbie Holdings"),
+      title3: t("Certified Real Estate Broker"),
+    },
+    {
+      name: "ALEXANDRE ETHIER",
+      title1: t("Partner at REL Realty Advisors"),
+      title2: t("President and Project Director at COGERCO"),
+    },
+  ];
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+  let [openLanguageMenu, setOpenLanguageMenu] = useState(false);
+
+  const changeToFrenchLanguage = () => {
+    if (i18n.language === "en") i18n.changeLanguage("fr");
+    languageMenuHandler();
+  };
+
+  const changeToEnglishLanguage = () => {
+    if (i18n.language === "fr") i18n.changeLanguage("en");
+    languageMenuHandler();
+  };
 
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
+
+  const languageMenuHandler = () => {
+    setOpenLanguageMenu((openLanguageMenu) => !openLanguageMenu);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -62,7 +79,43 @@ export default function Home() {
             alt="rel-Logo"
           />
         </Link>
-        <NavMenu />
+        <div style={{ display: "flex" }}>
+          <NavMenu />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              width: "1rem",
+              alignItems: "center",
+              justifyContent: "center",
+              position: "relative",
+            }}
+          >
+            <div
+              className={styles.languagemenubtncontainer}
+              onClick={languageMenuHandler}
+            >
+              <div className={styles.languagemenubtn}></div>
+            </div>
+            {openLanguageMenu ? (
+              <div className={styles.languagecontainer}>
+                <div
+                  className={styles.languagebtn}
+                  onClick={changeToFrenchLanguage}
+                >
+                  FR
+                </div>
+                <div
+                  className={styles.languagebtn}
+                  onClick={changeToEnglishLanguage}
+                >
+                  EN
+                </div>
+              </div>
+            ) : null}
+          </div>
+        </div>
+
         <div className={styles.sidedrawerbtn}>
           <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
           {drawerbtnActivated ? (
@@ -85,15 +138,7 @@ export default function Home() {
               src="images/RELLogoWhite.png"
               alt="rel-Logo-White"
             />
-            <div className={styles.pagetitletextcontent}>
-              REL Realty Advisors is a consortium of real estate professionals
-              who have been collaborating successfully on various projects for
-              nearly fifteen years. REL Realty Advisors focuses on resort
-              development, master-planned amenity properties and residential
-              communities. The founding partners have been involved in the real
-              estate milieu of development, project management and
-              commercialization for many years.
-            </div>
+            <div className={styles.pagetitletextcontent}>{t("paragraph1")}</div>
           </div>
         </div>
         <div className={styles.foundersection}>
@@ -104,7 +149,7 @@ export default function Home() {
           <div className={styles.foundersectionoverlay}>
             <div className={styles.founderscontainer}>
               <div className={styles.founderpartnertitle}>
-                FOUNDING PARTNERS
+                {t("FOUNDING PARTNERS")}
               </div>
               <FounderDisplay founders={founders} />
             </div>
@@ -114,15 +159,16 @@ export default function Home() {
         <div className={styles.successstorybackground}>
           <div className={styles.successstorycontent}>
             <div className={styles.successstorytitle}>
-              REL REALTY ADVISORS IS PROUD TO PRESENT ITS FIRST PROJECT
+              {t("REL REALTY ADVISORS IS PROUD TO PRESENT ITS FIRST PROJECT")}
             </div>
             <img
               className={styles.novatitle}
               src="/images/novatitleimage.png"
             />
             <div className={styles.novacontenttitle}>
-              A LAKEFRONT EXCLUSIVE COMMUNITY OF ONLY 8 LUXURY RESIDENCES ON
-              LAKE TREMBLANT
+              {t(
+                "A LAKEFRONT EXCLUSIVE COMMUNITY OF ONLY 8 LUXURY RESIDENCES ON LAKE TREMBLANT"
+              )}
             </div>
             <div className={styles.novacontentdescription}>
               NOVA Tremblant is an exclusive project of 8 newly built private
@@ -155,3 +201,13 @@ export default function Home() {
     </div>
   );
 }
+
+Home.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
+Home.PropsTypes = {
+  t: PropsTypes.func.isRequired,
+};
+
+export default withTranslation("common")(Home);

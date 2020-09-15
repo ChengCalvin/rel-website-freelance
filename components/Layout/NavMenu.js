@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../../styles/Layout.module.css";
+import { withTranslation, i18n } from "../../i18n";
 
 let menuContent = [
   { title: "HOME", link: "/" },

@@ -8,6 +8,8 @@ import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import FounderDisplay from "../components/FoundersDisplay/FounderDisplay";
 import ContactUsSection from "../components/ContactUs/ContactUs";
+import { withTranslation, i18n } from "../i18n";
+import PropsTypes from "prop-types";
 
 const ContactUs = () => {
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
@@ -102,4 +104,12 @@ const ContactUs = () => {
   );
 };
 
-export default ContactUs;
+ContactUs.getInitialProps = async () => ({
+  namespacesRequired: ["common"],
+});
+
+ContactUs.PropsTypes = {
+  t: PropsTypes.func.isRequired,
+};
+
+export default withTranslation("common")(ContactUs);
