@@ -70,7 +70,7 @@ const About = ({ t }) => {
             style={{
               display: "flex",
               flexDirection: "column",
-              width: "1rem",
+              width: "3rem",
               alignItems: "center",
               justifyContent: "center",
               position: "relative",
@@ -93,6 +93,7 @@ const About = ({ t }) => {
                 >
                   FR
                 </div>
+
                 <div
                   className={styles.languagebtn}
                   onClick={changeToEnglishLanguage}

@@ -52,8 +52,8 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  height: 3vw;
-  width: 3vw;
+  height: auto;
+  width: 100%;
   z-index: 1100;
   background-color: rgb(212, 212, 212);
   margin-top: 5rem;
@@ -127,7 +127,7 @@
   color: white;
 }
 
-.contactuscontainer:lang(fr){
+.contactuscontainer:lang(fr) {
   height: 50rem;
 }
 
@@ -174,7 +174,7 @@
     font-size: 0.85rem;
     font-weight: 600;
   }
-  .abouttext2:lang(fr){
+  .abouttext2:lang(fr) {
     font-size: 0.85rem;
   }
 }
@@ -211,8 +211,8 @@
   .contactuscontainer {
     height: 40rem;
   }
-  .contactuscontainer:lang(fr){
-    height: 42rem;  
+  .contactuscontainer:lang(fr) {
+    height: 42rem;
   }
 }
 
@@ -225,7 +225,7 @@
     padding-left: 24vw;
     padding-right: 24vw;
   }
-  .contactuscontainer:lang(fr){
+  .contactuscontainer:lang(fr) {
     height: 44rem;
   }
 }

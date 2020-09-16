@@ -120,7 +120,7 @@ const Partner = ({ t }) => {
             style={{
               display: "flex",
               flexDirection: "column",
-              width: "1rem",
+              width: "3rem",
               alignItems: "center",
               justifyContent: "center",
               position: "relative",
@@ -171,7 +171,7 @@ const Partner = ({ t }) => {
           <div className={styles.pagetitletextcontent}>{t("PARTNERS")}</div>
         </div>
         <div className={styles.foundingpartnercontainer}>
-          <div className={styles.foundingpartnertitle}>
+          <div className={styles.foundingpartnertitle} lang={i18n.language}>
             {t("FOUNDING PARTNERS")}
           </div>
           <div className={styles.foundingpartnertext}>

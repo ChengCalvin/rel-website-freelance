@@ -17,7 +17,7 @@
   border: none;
   cursor: pointer;
   padding: 5px;
-  margin-left: 1.2rem;
+  margin-left: 0.7rem;
 }
 
 .drawerbtn:hover {
@@ -102,8 +102,8 @@
   font-weight: 600;
 }
 
-@media(max-width: 350px){
-  .drawerbtn{
+@media (max-width: 350px) {
+  .drawerbtn {
     margin-left: 0;
   }
 }
@@ -114,20 +114,20 @@
   }
 }
 
-@media(max-width: 880px){
-  .navmenu:lang(fr){
-    display: none
+@media (max-width: 880px) {
+  .navmenu:lang(fr) {
+    display: none;
   }
-  .navmenu:lang(en){
+  .navmenu:lang(en) {
     display: none;
   }
 }
 
-@media (min-width: 768px){
-  .navmenu:lang(fr){
+@media (min-width: 768px) {
+  .navmenu:lang(fr) {
     width: 32rem;
   }
-  .navmenu:lang(en){
+  .navmenu:lang(en) {
     width: 22rem;
   }
 }

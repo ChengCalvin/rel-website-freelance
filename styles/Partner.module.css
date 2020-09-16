@@ -52,8 +52,8 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  height: 3vw;
-  width: 3vw;
+  height: auto;
+  width: 100%;
   z-index: 1100;
   background-color: rgb(212, 212, 212);
   margin-top: 5rem;
@@ -92,7 +92,7 @@
 
 .pagetitletextcontent {
   color: white;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 200;
 }
 
@@ -109,6 +109,10 @@
   display: flex;
   justify-content: center;
   color: #006a52;
+}
+
+.foundingpartnertitle:lang(fr) {
+  font-size: 1.2rem;
 }
 
 .foundingpartnertext {
@@ -168,15 +172,15 @@
     align-items: center;
   }
 }
-@media(max-width: 350px){
-  .headerlogo{
+@media (max-width: 350px) {
+  .headerlogo {
     min-width: 200px;
     width: 10%;
   }
 }
 
-@media(min-width: 880px){
-  .sidedrawerbtn:lang(fr){
+@media (min-width: 880px) {
+  .sidedrawerbtn:lang(fr) {
     display: none;
   }
 }
@@ -188,6 +192,9 @@
   }
   .sidedrawerbtn:lang(en) {
     display: none;
+  }
+  .pagetitletextcontent {
+    font-size: 3.5rem;
   }
   .foundingpartnertitle {
     font-size: 3rem;

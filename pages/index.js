@@ -84,7 +84,7 @@ function Home({ t }) {
             style={{
               display: "flex",
               flexDirection: "column",
-              width: "1rem",
+              width: "3rem",
               alignItems: "center",
               justifyContent: "center",
               position: "relative",
