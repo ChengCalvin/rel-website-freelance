@@ -6,9 +6,9 @@ import PropsTypes from "prop-types";
 const NavMenu = ({ t }) => {
   let menuContent = [
     { title: t("HOME"), link: "/" },
-    { title: t("ABOUT"), link: t("/about") },
-    { title: t("PARTNERS"), link: t("/partners") },
-    { title: t("CONTACT US"), link: t("/contact-us") },
+    { title: t("ABOUT"), link: "/about" },
+    { title: t("PARTNERS"), link: "/partners" },
+    { title: t("CONTACT US"), link: "/contact-us" },
   ];
   return (
     <div className={styles.navmenu} lang={i18n.language}>

@@ -335,13 +335,17 @@
   .sidedrawerbtn:lang(en) {
     display: none;
   }
+  .sidedrawerbtn:lang(fr) {
+    display: flex;
+    align-items: center;
+  }
   .pagetitlelogocontent {
     width: 80%;
     margin-top: 8rem;
   }
   .pagetitlelogo {
     width: 100%;
-    height: 35%;
+    height: 30%;
   }
   .pagetitletextcontent {
     width: 100%;
@@ -362,7 +366,7 @@
     font-weight: 900;
     font-size: 3rem;
   }
-  .successstorybackground {
+  .successstorybackground:lang(en) {
     height: 75rem;
   }
   .successstorybackground:lang(fr) {
@@ -391,12 +395,30 @@
   }
 }
 
+@media (min-width: 918px) {
+  .sidedrawerbtn:lang(fr) {
+    display: none;
+  }
+}
+
 @media (min-width: 920px) {
-  .successstorybackground {
+  .successstorybackground:lang(en) {
     height: 82rem;
   }
   .successstorybackground:lang(fr) {
     height: 87rem;
+  }
+}
+
+@media( min-width: 1020px){
+  .pagetitlelogo{
+    height: 33%;
+  }
+}
+
+@media (min-width: 1080px) {
+  .successstorybackground:lang(en) {
+    height: 85rem;
   }
 }
 
@@ -406,21 +428,24 @@
     padding-left: 24vw;
     padding-right: 24vw;
   }
+  .pagetitle{
+    height: 55rem;
+  }
   .pagetitlelogocontent {
     width: 50%;
     margin-top: 8rem;
   }
   .pagetitlelogo {
     width: 100%;
-    height: 40%;
+    height: 38%;
   }
   .founderscontainer {
     width: 50%;
   }
-  .successstorybackground {
-    height: 90rem;
+  .successstorybackground:lang(en) {
+    height: 75rem;
   }
-  .successstorybackground:lang(fr){
+  .successstorybackground:lang(fr) {
     height: 86rem;
   }
   .successstorycontent {
@@ -430,7 +455,7 @@
 }
 
 @media (min-width: 1500px) {
-  .successstorybackground {
+  .successstorybackground:lang(en) {
     height: 82rem;
   }
 }

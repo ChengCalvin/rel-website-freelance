@@ -21,6 +21,7 @@
     "firebase": "7.19.1",
     "next": "9.5.2",
     "next-i18next": "^6.0.2",
+    "next-routes": "^1.4.2",
     "nodemon": "2.0.4",
     "prop-types": "15.6.2",
     "react": "16.13.1",

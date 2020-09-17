@@ -6,9 +6,9 @@ import PropsTypes from "prop-types";
 const SideDrawer = (props) => {
   let menuContent = [
     { title: i18next.t("HOME"), link: "/" },
-    { title: i18next.t("ABOUT"), link: i18next.t("/about") },
-    { title: i18next.t("PARTNERS"), link: i18next.t("/partners") },
-    { title: i18next.t("CONTACT US"), link: i18next.t("contact-us") },
+    { title: i18next.t("ABOUT"), link: "/about" },
+    { title: i18next.t("PARTNERS"), link: "/partners" },
+    { title: i18next.t("CONTACT US"), link: "contact-us" },
   ];
   return (
     <div className={styles.sidedrawer}>

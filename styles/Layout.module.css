@@ -108,17 +108,14 @@
   }
 }
 
-@media (max-width: 767px) {
-  .navmenu {
+@media (max-width: 810px) {
+  .navmenu:lang(en) {
     display: none;
   }
 }
 
 @media (max-width: 880px) {
   .navmenu:lang(fr) {
-    display: none;
-  }
-  .navmenu:lang(en) {
     display: none;
   }
 }
@@ -128,6 +125,6 @@
     width: 32rem;
   }
   .navmenu:lang(en) {
-    width: 28rem;
+    width: 26rem;
   }
 }

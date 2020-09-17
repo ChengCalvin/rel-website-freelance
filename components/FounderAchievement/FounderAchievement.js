@@ -1,4 +1,5 @@
 import styles from "../../styles/FounderAchievement.module.css";
+import { i18n } from "../../i18n";
 
 const FounderAchievement = (props) => {
   return (
@@ -29,11 +30,15 @@ const FounderAchievement = (props) => {
           </div>
           <div>
             <ul>
-              {props.partner.allAchievements?.map((achievement, i) => (
+              {i18n.language === "en" ? props.partner.allAchievements?.map((achievement, i) => (
                 <li className={styles.achievementlistitem} key={i}>
                   {achievement}
                 </li>
-              ))}
+              )) : props.partner.allAchievementsFR?.map((achievementFR, i) => (
+                <li className={styles.achievementlistitem} key={i}>
+                  {achievementFR}
+                </li>
+              ) )}
             </ul>
           </div>
         </div>

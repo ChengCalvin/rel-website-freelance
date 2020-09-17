@@ -74,6 +74,14 @@ const Partner = ({ t }) => {
         t("achievement4"),
         t("achievement5"),
       ],
+      allAchievementsFR: [
+        t("achievement1"),
+        t("achievement2"),
+        t("achievement3"),
+        t("achievement4"),
+        t("achievement5"),
+        t("achievement6"),
+      ],
     },
   ];
 

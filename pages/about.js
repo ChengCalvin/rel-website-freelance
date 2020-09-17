@@ -6,7 +6,7 @@ import DrawerButton from "../components/Layout/SideDrawer/DrawerButton/DrawerBut
 import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import ContactUs from "../components/ContactUs/ContactUs";
-import { withTranslation, i18n, Link } from "../i18n";
+import { withTranslation, i18n, Link, Router } from "../i18n";
 import PropsTypes from "prop-types";
 
 const About = ({ t }) => {
@@ -15,15 +15,15 @@ const About = ({ t }) => {
 
   const changeToFrenchLanguage = () => {
     if (i18n.language === "en") i18n.changeLanguage("fr");
-    languageMenuHandler();
+    languageMenuIsOpen();
   };
 
   const changeToEnglishLanguage = () => {
     if (i18n.language === "fr") i18n.changeLanguage("en");
-    languageMenuHandler();
+    languageMenuIsOpen();
   };
 
-  const languageMenuHandler = () => {
+  const languageMenuIsOpen = () => {
     setOpenLanguageMenu((openLanguageMenu) => !openLanguageMenu);
   };
 
@@ -78,7 +78,7 @@ const About = ({ t }) => {
           >
             <div
               className={styles.languagemenubtncontainer}
-              onClick={languageMenuHandler}
+              onClick={languageMenuIsOpen}
             >
               <div
                 className={styles.languagemenubtn}
