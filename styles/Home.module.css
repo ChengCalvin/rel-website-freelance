@@ -327,12 +327,6 @@
   }
 }
 
-@media (min-width: 880px) {
-  .sidedrawerbtn:lang(fr) {
-    display: none;
-  }
-}
-
 @media (min-width: 768px) {
   .header {
     padding-left: 10vw;
@@ -371,6 +365,9 @@
   .successstorybackground {
     height: 75rem;
   }
+  .successstorybackground:lang(fr) {
+    height: 83rem;
+  }
   .successstorycontent {
     padding-left: 10vw;
     padding-right: 10vw;
@@ -388,9 +385,18 @@
   }
 }
 
+@media (min-width: 880px) {
+  .sidedrawerbtn:lang(fr) {
+    display: none;
+  }
+}
+
 @media (min-width: 920px) {
   .successstorybackground {
     height: 82rem;
+  }
+  .successstorybackground:lang(fr) {
+    height: 87rem;
   }
 }
 
@@ -413,6 +419,9 @@
   }
   .successstorybackground {
     height: 90rem;
+  }
+  .successstorybackground:lang(fr){
+    height: 86rem;
   }
   .successstorycontent {
     padding-left: 24vw;
