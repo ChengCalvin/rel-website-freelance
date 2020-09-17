@@ -455,6 +455,9 @@
 }
 
 @media (min-width: 1500px) {
+  .pagetitle{
+    height: 50rem;
+  }
   .successstorybackground:lang(en) {
     height: 82rem;
   }
