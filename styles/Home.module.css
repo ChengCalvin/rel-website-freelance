@@ -380,7 +380,7 @@
     font-size: 3rem;
   }
   .successstorybackground:lang(en) {
-    height: 75rem;
+    height: 78rem;
   }
   .successstorybackground:lang(fr) {
     height: 94rem;
@@ -465,7 +465,7 @@
     width: 50%;
   }
   .successstorybackground:lang(en) {
-    height: 75rem;
+    height: 77rem;
   }
   .successstorybackground:lang(fr) {
     height: 95rem;
@@ -490,7 +490,7 @@
 
 @media (min-width: 1715px) {
   .successstorybackground:lang(en) {
-    height: 87rem;
+    height: 89rem;
   }
   .successstorybackground:lang(fr) {
     height: 102rem;
