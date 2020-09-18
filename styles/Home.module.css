@@ -188,6 +188,13 @@
   width: 100%;
 }
 
+.novaintroparagraph {
+  font-size: 0.9rem;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  line-height: 2rem;
+}
+
 .novacontenttitle {
   padding-left: 5%;
   padding-right: 5%;
@@ -300,7 +307,7 @@
     height: 70rem;
   }
   .successstorybackground:lang(fr) {
-    height: 80rem;
+    height: 92rem;
   }
   .successstorycontent {
     padding-left: 5vw;
@@ -324,6 +331,12 @@
   .headerlogo {
     min-width: 200px;
     width: 10%;
+  }
+}
+
+@media (min-width: 361px) {
+  .successstorybackground:lang(fr) {
+    height: 88rem;
   }
 }
 
@@ -370,7 +383,7 @@
     height: 75rem;
   }
   .successstorybackground:lang(fr) {
-    height: 83rem;
+    height: 85rem;
   }
   .successstorycontent {
     padding-left: 10vw;
@@ -406,12 +419,12 @@
     height: 82rem;
   }
   .successstorybackground:lang(fr) {
-    height: 87rem;
+    height: 93rem;
   }
 }
 
-@media( min-width: 1020px){
-  .pagetitlelogo{
+@media (min-width: 1020px) {
+  .pagetitlelogo {
     height: 33%;
   }
 }
@@ -428,7 +441,7 @@
     padding-left: 24vw;
     padding-right: 24vw;
   }
-  .pagetitle{
+  .pagetitle {
     height: 55rem;
   }
   .pagetitlelogocontent {
@@ -446,7 +459,7 @@
     height: 75rem;
   }
   .successstorybackground:lang(fr) {
-    height: 86rem;
+    height: 88rem;
   }
   .successstorycontent {
     padding-left: 24vw;
@@ -455,11 +468,14 @@
 }
 
 @media (min-width: 1500px) {
-  .pagetitle{
+  .pagetitle {
     height: 50rem;
   }
   .successstorybackground:lang(en) {
     height: 82rem;
+  }
+  .successstorybackground:lang(fr) {
+    height: 91rem;
   }
 }
 
@@ -468,7 +484,7 @@
     height: 87rem;
   }
   .successstorybackground:lang(fr) {
-    height: 95rem;
+    height: 97rem;
   }
 }
 

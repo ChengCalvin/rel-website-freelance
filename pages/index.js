@@ -162,6 +162,15 @@ function Home({ t }) {
             <div className={styles.successstorytitle}>
               {t("REL REALTY ADVISORS IS PROUD TO PRESENT ITS FIRST PROJECT")}
             </div>
+            <>
+              {i18n.language === "fr" ? (
+                <div className={styles.novaintroparagraph}>
+                  {t("NovaIntro")}
+                </div>
+              ) : (
+                <></>
+              )}
+            </>
             <img
               className={styles.novatitle}
               src="/images/novatitleimage.png"
