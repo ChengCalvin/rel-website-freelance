@@ -59,7 +59,7 @@ const Partner = ({ t }) => {
       profileImage: "/images/alexprofile.jpg",
       alt: "alex",
       name: "ALEXANDRE ETHIER",
-      title1: t("Partner at REL Realty Advisor"),
+      title1: t("Partner at REL Realty Advisors"),
       title2: t("President and Project Director at COGERCO"),
       description: [
         t("paragraphalex1"),

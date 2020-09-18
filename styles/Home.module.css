@@ -343,6 +343,12 @@
   }
 }
 
+@media (min-width: 500px) {
+  .pagetitle {
+    height: 45rem;
+  }
+}
+
 @media (min-width: 768px) {
   .header {
     padding-left: 10vw;
@@ -453,9 +459,6 @@
     padding-left: 24vw;
     padding-right: 24vw;
   }
-  .pagetitle {
-    height: 55rem;
-  }
   .pagetitlelogocontent {
     width: 50%;
     margin-top: 8rem;
@@ -480,11 +483,8 @@
 }
 
 @media (min-width: 1500px) {
-  .pagetitle {
-    height: 50rem;
-  }
   .pagetitlelogo {
-    height: 35%;
+    height: 38%;
   }
   .successstorybackground:lang(en) {
     height: 82rem;
