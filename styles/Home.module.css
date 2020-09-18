@@ -462,7 +462,7 @@
   }
   .pagetitlelogo {
     width: 100%;
-    height: 38%;
+    height: 25%;
   }
   .founderscontainer {
     width: 50%;
@@ -482,6 +482,9 @@
 @media (min-width: 1500px) {
   .pagetitle {
     height: 50rem;
+  }
+  .pagetitlelogo {
+    height: 35%;
   }
   .successstorybackground:lang(en) {
     height: 82rem;

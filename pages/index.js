@@ -13,7 +13,7 @@ import PropsTypes from "prop-types";
 function Home({ t }) {
   let founders = [
     {
-      name: "HERBERT RASTCH",
+      name: "HERBERT RATSCH",
       title1: t("Partner at REL Realty Advisors"),
       title2: t("President at Herbie Holdings"),
       title3: t("Certified Real Estate Broker"),
@@ -42,14 +42,24 @@ function Home({ t }) {
   };
 
   const languageMenuHandler = () => {
-    setOpenLanguageMenu((openLanguageMenu) => !openLanguageMenu);
+    let languageMenuIsOpen = openLanguageMenu;
+    languageMenuIsOpen = !openLanguageMenu;
+    setOpenLanguageMenu((prev) => !prev);
+    if (languageMenuIsOpen == true) {
+      document.addEventListener("click", languageOutsideBoxClick, false);
+    }
+  };
+
+  const languageOutsideBoxClick = () => {
+    languageMenuHandler();
+    document.removeEventListener("click", languageOutsideBoxClick, false);
   };
 
   return (
     <div className={styles.container}>
       <Head>
         {/* website tab title */}
-        <title> REL REALTY ADVISORS</title>
+        <title>REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
@@ -90,13 +100,11 @@ function Home({ t }) {
               position: "relative",
             }}
           >
-            <div
-              className={styles.languagemenubtncontainer}
-              onClick={languageMenuHandler}
-            >
+            <div className={styles.languagemenubtncontainer}>
               <div
                 className={styles.languagemenubtn}
                 lang={i18n.language}
+                onClick={languageMenuHandler}
               ></div>
             </div>
             {openLanguageMenu ? (

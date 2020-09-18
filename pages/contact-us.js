@@ -30,7 +30,7 @@ const ContactUs = ({ t }) => {
 
   let founders = [
     {
-      name: "HERBERT RASTCH",
+      name: "HERBERT RATSCH",
       email: "herbert@relra.com",
       phone: "C: 819-429-9019",
       cellphone: "C: 514-884-8269",

@@ -31,7 +31,7 @@ const Partner = ({ t }) => {
     {
       profileImage: "/images/herbieprofile.jpg",
       alt: "herbie",
-      name: "HERBERT RASTCH",
+      name: "HERBERT RATSCH",
       title1: t("Partner at REL Realty Advisors"),
       title2: t("President at Herbie Holdings"),
       title3: t("Certified Real Estate Broker"),

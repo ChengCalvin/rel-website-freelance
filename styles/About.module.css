@@ -171,11 +171,11 @@
     align-items: center;
   }
   .abouttext1:lang(fr) {
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 600;
   }
   .abouttext2:lang(fr) {
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
 
