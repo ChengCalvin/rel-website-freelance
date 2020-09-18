@@ -307,7 +307,7 @@
     height: 70rem;
   }
   .successstorybackground:lang(fr) {
-    height: 92rem;
+    height: 95rem;
   }
   .successstorycontent {
     padding-left: 5vw;
@@ -336,7 +336,7 @@
 
 @media (min-width: 361px) {
   .successstorybackground:lang(fr) {
-    height: 88rem;
+    height: 87rem;
   }
 }
 
@@ -383,7 +383,7 @@
     height: 75rem;
   }
   .successstorybackground:lang(fr) {
-    height: 92rem;
+    height: 94rem;
   }
   .novaintroparagraph {
     font-size: 1.3rem;
@@ -468,7 +468,7 @@
     height: 75rem;
   }
   .successstorybackground:lang(fr) {
-    height: 93rem;
+    height: 95rem;
   }
   .successstorycontent {
     padding-left: 24vw;
@@ -484,7 +484,7 @@
     height: 82rem;
   }
   .successstorybackground:lang(fr) {
-    height: 96rem;
+    height: 98rem;
   }
 }
 
@@ -493,7 +493,7 @@
     height: 87rem;
   }
   .successstorybackground:lang(fr) {
-    height: 100rem;
+    height: 102rem;
   }
 }
 
