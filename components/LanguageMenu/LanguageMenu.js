@@ -8,7 +8,7 @@ const LanguageMenu = (props) => (
         lang={props.i18nLang}
         onClick={props.languageMenuClicked}
       >
-        {props.i18nLang?.toUpperCase()}
+        {props.i18nLang === "en" ? "FR" : "EN"}
       </div>
     </div>
   </div>
