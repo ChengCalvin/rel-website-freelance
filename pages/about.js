@@ -6,30 +6,36 @@ import DrawerButton from "../components/Layout/SideDrawer/DrawerButton/DrawerBut
 import Backdrop from "../components/Layout/Backdrop/Backdrop";
 import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import ContactUs from "../components/ContactUs/ContactUs";
-import { withTranslation, i18n, Link, Router } from "../i18n";
+import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
+import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
 
 const About = ({ t }) => {
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
-  let [openLanguageMenu, setOpenLanguageMenu] = useState(false);
 
-  const changeToFrenchLanguage = () => {
-    if (i18n.language === "en") i18n.changeLanguage("fr");
-    languageMenuIsOpen();
-  };
-
-  const changeToEnglishLanguage = () => {
-    if (i18n.language === "fr") i18n.changeLanguage("en");
-    languageMenuIsOpen();
-  };
-
-  const languageMenuIsOpen = () => {
-    setOpenLanguageMenu((openLanguageMenu) => !openLanguageMenu);
+  const languageMenuHandler = () => {
+    i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
 
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
+
+  let sideDrawer = (
+    <div className={styles.sidedrawerbtn}>
+      <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
+      {drawerbtnActivated ? (
+        <>
+          <Backdrop
+            showBackdrop={drawerbtnActivated}
+            backdropClicked={drawerbtnClickedHandler}
+          />
+          <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
+        </>
+      ) : null}
+    </div>
+  );
+
   return (
     <div className={styles.container}>
       <Head>
@@ -55,6 +61,7 @@ const About = ({ t }) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="HandheldFriendly" content="true" />
       </Head>
+
       <header className={styles.header}>
         <Link href="/">
           <img
@@ -66,55 +73,11 @@ const About = ({ t }) => {
 
         <div style={{ display: "flex", width: "fit-content" }}>
           <NavMenu />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "3rem",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "relative",
-            }}
-          >
-            <div
-              className={styles.languagemenubtncontainer}
-              onClick={languageMenuIsOpen}
-            >
-              <div
-                className={styles.languagemenubtn}
-                lang={i18n.language}
-              ></div>
-            </div>
-            {openLanguageMenu ? (
-              <div className={styles.languagecontainer}>
-                <div
-                  className={styles.languagebtn}
-                  onClick={changeToFrenchLanguage}
-                >
-                  FR
-                </div>
-
-                <div
-                  className={styles.languagebtn}
-                  onClick={changeToEnglishLanguage}
-                >
-                  EN
-                </div>
-              </div>
-            ) : null}
-          </div>
-          <div className={styles.sidedrawerbtn}>
-            <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
-            {drawerbtnActivated ? (
-              <>
-                <Backdrop
-                  showBackdrop={drawerbtnActivated}
-                  backdropClicked={drawerbtnClickedHandler}
-                />
-                <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
-              </>
-            ) : null}
-          </div>
+          <LanguageMenu
+            i18nLang={i18n.language}
+            languageMenuClicked={languageMenuHandler}
+          />
+          {sideDrawer}
         </div>
       </header>
 
@@ -122,6 +85,7 @@ const About = ({ t }) => {
         <div className={styles.pagetitle}>
           <div className={styles.pagetitletextcontent}>{t("ABOUT")}</div>
         </div>
+
         <div className={styles.abouttextcontainer}>
           <div className={styles.abouttext1}>
             <div>&ldquo;</div>
@@ -135,6 +99,7 @@ const About = ({ t }) => {
             {t("aboutparagraph3")}
           </div>
         </div>
+
         <div className={styles.contactuscontainer}>
           <ContactUs />
         </div>

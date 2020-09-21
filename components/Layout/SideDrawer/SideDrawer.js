@@ -18,7 +18,7 @@ const SideDrawer = (props) => {
       </div>
       <ul>
         {menuContent.map((menucontent, i) => (
-          <li className={styles.sidedrawermenu}>
+          <li className={styles.sidedrawermenu} key={i}>
             <Link href={menucontent.link}>
               <div className={styles.navmenutitle} key={i}>
                 {menucontent.title}

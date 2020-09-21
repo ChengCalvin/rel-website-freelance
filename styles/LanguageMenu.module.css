@@ -1,0 +1,28 @@
+.languagesection {
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.languagemenubtncontainer {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.languagemenubtn {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-weight: 400;
+  color: #005a44;
+}
+
+.languagemenubtn:hover {
+  cursor: pointer;
+}

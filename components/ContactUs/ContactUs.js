@@ -1,7 +1,7 @@
 import { useState } from "react";
 import emailjs from "emailjs-com";
 import styles from "../../styles/ContactUs.module.css";
-import { withTranslation, i18n, Trans } from "..../../../i18n";
+import { withTranslation, Trans } from "..../../../i18n";
 import PropsTypes from "prop-types";
 
 let SERVICE_ID = "service_27cl4ij";

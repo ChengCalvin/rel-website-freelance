@@ -9,23 +9,13 @@ import FounderDisplay from "../components/FoundersDisplay/FounderDisplay";
 import ContactUsSection from "../components/ContactUs/ContactUs";
 import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
+import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
 
 const ContactUs = ({ t }) => {
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
-  let [openLanguageMenu, setOpenLanguageMenu] = useState(false);
-
-  const changeToFrenchLanguage = () => {
-    if (i18n.language === "en") i18n.changeLanguage("fr");
-    languageMenuHandler();
-  };
-
-  const changeToEnglishLanguage = () => {
-    if (i18n.language === "fr") i18n.changeLanguage("en");
-    languageMenuHandler();
-  };
 
   const languageMenuHandler = () => {
-    setOpenLanguageMenu((openLanguageMenu) => !openLanguageMenu);
+    i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
 
   let founders = [
@@ -48,6 +38,22 @@ const ContactUs = ({ t }) => {
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
+
+  let sideDrawer = (
+    <div className={styles.sidedrawerbtn}>
+      <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
+      {drawerbtnActivated ? (
+        <>
+          <Backdrop
+            showBackdrop={drawerbtnActivated}
+            backdropClicked={drawerbtnClickedHandler}
+          />
+          <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
+        </>
+      ) : null}
+    </div>
+  );
+
   return (
     <div className={styles.container}>
       <Head>
@@ -73,6 +79,7 @@ const ContactUs = ({ t }) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="HandheldFriendly" content="true" />
       </Head>
+
       <header className={styles.header}>
         <Link href="/">
           <img
@@ -83,66 +90,26 @@ const ContactUs = ({ t }) => {
         </Link>
         <div style={{ display: "flex", width: "fit-content" }}>
           <NavMenu />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "3rem",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "relative",
-            }}
-          >
-            <div
-              className={styles.languagemenubtncontainer}
-              onClick={languageMenuHandler}
-            >
-              <div
-                className={styles.languagemenubtn}
-                lang={i18n.language}
-              ></div>
-            </div>
-            {openLanguageMenu ? (
-              <div className={styles.languagecontainer}>
-                <div
-                  className={styles.languagebtn}
-                  onClick={changeToFrenchLanguage}
-                >
-                  FR
-                </div>
-                <div
-                  className={styles.languagebtn}
-                  onClick={changeToEnglishLanguage}
-                >
-                  EN
-                </div>
-              </div>
-            ) : null}
-          </div>
-          <div className={styles.sidedrawerbtn}>
-            <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
-            {drawerbtnActivated ? (
-              <>
-                <Backdrop
-                  showBackdrop={drawerbtnActivated}
-                  backdropClicked={drawerbtnClickedHandler}
-                />
-                <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
-              </>
-            ) : null}
-          </div>
+          <LanguageMenu
+            i18nLang={i18n.language}
+            languageMenuClicked={languageMenuHandler}
+          />
+          {sideDrawer}
         </div>
       </header>
+
       <main className={styles.main}>
         <div className={styles.pagetitle}>
           <div className={styles.pagetitletextcontent}>{t("CONTACT US")}</div>
         </div>
+
         <div className={styles.foundercontactcontainer}>
           <FounderDisplay
             founders={founders}
             verticalLineColor={verticalLineColor}
           />
         </div>
+
         <div className={styles.contactuscontainer}>
           <ContactUsSection />
         </div>

@@ -9,6 +9,7 @@ import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import ContactUs from "../components/ContactUs/ContactUs";
 import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
+import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
 
 function Home({ t }) {
   let founders = [
@@ -25,35 +26,29 @@ function Home({ t }) {
     },
   ];
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
-  let [openLanguageMenu, setOpenLanguageMenu] = useState(false);
-
-  const changeToFrenchLanguage = () => {
-    if (i18n.language === "en") i18n.changeLanguage("fr");
-    languageMenuHandler();
-  };
-
-  const changeToEnglishLanguage = () => {
-    if (i18n.language === "fr") i18n.changeLanguage("en");
-    languageMenuHandler();
-  };
 
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
 
   const languageMenuHandler = () => {
-    let languageMenuIsOpen = openLanguageMenu;
-    languageMenuIsOpen = !openLanguageMenu;
-    setOpenLanguageMenu((prev) => !prev);
-    if (languageMenuIsOpen == true) {
-      document.addEventListener("click", languageOutsideBoxClick, false);
-    }
+    i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
 
-  const languageOutsideBoxClick = () => {
-    languageMenuHandler();
-    document.removeEventListener("click", languageOutsideBoxClick, false);
-  };
+  let sideDrawer = (
+    <div className={styles.sidedrawerbtn}>
+      <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
+      {drawerbtnActivated ? (
+        <>
+          <Backdrop
+            showBackdrop={drawerbtnActivated}
+            backdropClicked={drawerbtnClickedHandler}
+          />
+          <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
+        </>
+      ) : null}
+    </div>
+  );
 
   return (
     <div className={styles.container}>
@@ -80,6 +75,7 @@ function Home({ t }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="HandheldFriendly" content="true" />
       </Head>
+
       <header className={styles.header}>
         <Link href="/">
           <img
@@ -90,52 +86,11 @@ function Home({ t }) {
         </Link>
         <div style={{ display: "flex", width: "fit-content" }}>
           <NavMenu />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "3rem",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "relative",
-            }}
-          >
-            <div className={styles.languagemenubtncontainer}>
-              <div
-                className={styles.languagemenubtn}
-                lang={i18n.language}
-                onClick={languageMenuHandler}
-              ></div>
-            </div>
-            {openLanguageMenu ? (
-              <div className={styles.languagecontainer}>
-                <div
-                  className={styles.languagebtn}
-                  onClick={changeToFrenchLanguage}
-                >
-                  FR
-                </div>
-                <div
-                  className={styles.languagebtn}
-                  onClick={changeToEnglishLanguage}
-                >
-                  EN
-                </div>
-              </div>
-            ) : null}
-          </div>
-          <div className={styles.sidedrawerbtn}>
-            <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
-            {drawerbtnActivated ? (
-              <>
-                <Backdrop
-                  showBackdrop={drawerbtnActivated}
-                  backdropClicked={drawerbtnClickedHandler}
-                />
-                <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
-              </>
-            ) : null}
-          </div>
+          <LanguageMenu
+            i18nLang={i18n.language}
+            languageMenuClicked={languageMenuHandler}
+          />
+          {sideDrawer}
         </div>
       </header>
 
@@ -150,6 +105,7 @@ function Home({ t }) {
             <div className={styles.pagetitletextcontent}>{t("paragraph1")}</div>
           </div>
         </div>
+
         <div className={styles.foundersection}>
           <img
             src="images/foundersection.jpg"
@@ -174,12 +130,9 @@ function Home({ t }) {
                   <div className={styles.novaintroparagraph}>
                     {t("NovaIntro")}
                   </div>
-                ) : (
-                  <></>
-                )}
+                ) : null}
               </>
             </div>
-
             <img
               className={styles.novatitle}
               src="/images/novatitleimage.png"
@@ -205,6 +158,7 @@ function Home({ t }) {
             </div>
           </div>
         </div>
+
         <div className={styles.contactuscontainer}>
           <ContactUs />
         </div>

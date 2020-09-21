@@ -8,23 +8,13 @@ import SideDrawer from "../components/Layout/SideDrawer/SideDrawer";
 import FounderAchievement from "../components/FounderAchievement/FounderAchievement";
 import { withTranslation, i18n, Link, Trans } from "../i18n";
 import PropsTypes from "prop-types";
+import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
 
 const Partner = ({ t }) => {
   let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
-  let [openLanguageMenu, setOpenLanguageMenu] = useState(false);
-
-  const changeToFrenchLanguage = () => {
-    if (i18n.language === "en") i18n.changeLanguage("fr");
-    languageMenuHandler();
-  };
-
-  const changeToEnglishLanguage = () => {
-    if (i18n.language === "fr") i18n.changeLanguage("en");
-    languageMenuHandler();
-  };
 
   const languageMenuHandler = () => {
-    setOpenLanguageMenu((openLanguageMenu) => !openLanguageMenu);
+    i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
 
   let partners = [
@@ -88,6 +78,22 @@ const Partner = ({ t }) => {
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
+
+  let sideDrawer = (
+    <div className={styles.sidedrawerbtn}>
+      <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
+      {drawerbtnActivated ? (
+        <>
+          <Backdrop
+            showBackdrop={drawerbtnActivated}
+            backdropClicked={drawerbtnClickedHandler}
+          />
+          <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
+        </>
+      ) : null}
+    </div>
+  );
+
   return (
     <div className={styles.container}>
       <Head>
@@ -113,6 +119,7 @@ const Partner = ({ t }) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="HandheldFriendly" content="true" />
       </Head>
+
       <header className={styles.header}>
         <Link href="/">
           <img
@@ -123,60 +130,19 @@ const Partner = ({ t }) => {
         </Link>
         <div style={{ display: "flex", width: "fit-content" }}>
           <NavMenu />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              width: "3rem",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "relative",
-            }}
-          >
-            <div
-              className={styles.languagemenubtncontainer}
-              onClick={languageMenuHandler}
-            >
-              <div
-                className={styles.languagemenubtn}
-                lang={i18n.language}
-              ></div>
-            </div>
-            {openLanguageMenu ? (
-              <div className={styles.languagecontainer}>
-                <div
-                  className={styles.languagebtn}
-                  onClick={changeToFrenchLanguage}
-                >
-                  FR
-                </div>
-                <div
-                  className={styles.languagebtn}
-                  onClick={changeToEnglishLanguage}
-                >
-                  EN
-                </div>
-              </div>
-            ) : null}
-          </div>
-          <div className={styles.sidedrawerbtn}>
-            <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
-            {drawerbtnActivated ? (
-              <>
-                <Backdrop
-                  showBackdrop={drawerbtnActivated}
-                  backdropClicked={drawerbtnClickedHandler}
-                />
-                <SideDrawer closeMenuClicked={drawerbtnClickedHandler} />
-              </>
-            ) : null}
-          </div>
+          <LanguageMenu
+            i18nLang={i18n.language}
+            languageMenuClicked={languageMenuHandler}
+          />
+          {sideDrawer}
         </div>
       </header>
+
       <main className={styles.main}>
         <div className={styles.pagetitle}>
           <div className={styles.pagetitletextcontent}>{t("PARTNERS")}</div>
         </div>
+
         <div className={styles.foundingpartnercontainer}>
           <div className={styles.foundingpartnertitle}>
             {t("FOUNDING PARTNERS")}
@@ -185,6 +151,7 @@ const Partner = ({ t }) => {
             {t("foundingpartnerparagraph1")}
           </div>
         </div>
+
         <div className={styles.foundersbackgroundcontainer}>
           <div className={styles.foundersdetailcontainer}>
             {partners.map((partner, i) => (
