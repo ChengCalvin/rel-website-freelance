@@ -120,7 +120,7 @@ const ContactUs = ({ t }) => {
         <div className={styles.relcontactemail1}>
           <div className={styles.contactperson}>
             <Trans i18nKey="translation">
-              <strong >General Inquiries: </strong>
+              <strong>General Inquiries: </strong>
             </Trans>
             info@relra.com
           </div>
@@ -130,7 +130,7 @@ const ContactUs = ({ t }) => {
         </div>
         <div className={styles.relcontactemail2}>
           <div className={styles.contactperson}>
-            <b>Herbert Rastch:</b> herbert@relra.com
+            <b>Herbert Ratsch:</b> herbert@relra.com
           </div>
         </div>
       </div>
