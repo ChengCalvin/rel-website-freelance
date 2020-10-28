@@ -4,7 +4,7 @@ import i18next from "i18next";
 import PropsTypes from "prop-types";
 
 const SideDrawer = (props) => {
-  let menuContent = [
+  const menuContent = [
     { title: i18next.t("HOME"), link: "/" },
     { title: i18next.t("ABOUT"), link: "/about" },
     { title: i18next.t("PARTNERS"), link: "/partners" },

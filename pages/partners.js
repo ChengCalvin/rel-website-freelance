@@ -11,13 +11,13 @@ import PropsTypes from "prop-types";
 import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
 
 const Partner = ({ t }) => {
-  let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+  const [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
 
   const languageMenuHandler = () => {
     i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
 
-  let partners = [
+  const partners = [
     {
       profileImage: "/images/herbieprofile.jpg",
       alt: "herbie",

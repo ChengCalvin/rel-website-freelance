@@ -4,7 +4,7 @@ import PropsTypes from "prop-types";
 
 
 const NavMenu = ({ t }) => {
-  let menuContent = [
+  const menuContent = [
     { title: t("HOME"), link: "/" },
     { title: t("ABOUT"), link: "/about" },
     { title: t("PARTNERS"), link: "/partners" },

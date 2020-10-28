@@ -11,7 +11,7 @@ import PropsTypes from "prop-types";
 import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
 
 const About = ({ t }) => {
-  let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+  const [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
 
   const languageMenuHandler = () => {
     i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
@@ -21,7 +21,7 @@ const About = ({ t }) => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
 
-  let sideDrawer = (
+  const sideDrawer = (
     <div className={styles.sidedrawerbtn}>
       <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
       {drawerbtnActivated ? (

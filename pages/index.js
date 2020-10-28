@@ -12,7 +12,7 @@ import PropsTypes from "prop-types";
 import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
 
 function Home({ t }) {
-  let founders = [
+  const founders = [
     {
       name: "HERBERT RATSCH",
       title1: t("Partner at REL Realty Advisors"),
@@ -25,7 +25,7 @@ function Home({ t }) {
       title2: t("President and Project Director at COGERCO"),
     },
   ];
-  let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+  const [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
 
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
@@ -35,7 +35,7 @@ function Home({ t }) {
     i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
 
-  let sideDrawer = (
+  const sideDrawer = (
     <div className={styles.sidedrawerbtn}>
       <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
       {drawerbtnActivated ? (
