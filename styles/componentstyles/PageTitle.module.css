@@ -88,7 +88,7 @@
     width: 80%;
     margin-top: 8rem;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
   }
@@ -121,7 +121,7 @@
     width: 50%;
     margin-top: 8rem;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
   }
