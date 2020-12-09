@@ -1,6 +1,6 @@
 import styles from "../../styles/FounderDisplay.module.css";
 
-let ACCUMULATOR = null;
+const ACCUMULATOR = null;
 
 const FounderDisplay = (props) => {
   return (

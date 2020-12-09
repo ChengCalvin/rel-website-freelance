@@ -10,15 +10,16 @@ import ContactUsSection from "../components/ContactUs/ContactUs";
 import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
 import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
+import PageTitle from "../components/PageContent/PageTitle";
 
 const ContactUs = ({ t }) => {
-  let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+  const [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
 
   const languageMenuHandler = () => {
     i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
 
-  let founders = [
+  const founders = [
     {
       name: "HERBERT RATSCH",
       email: "herbert@relra.com",
@@ -33,13 +34,17 @@ const ContactUs = ({ t }) => {
     },
   ];
 
-  let verticalLineColor = "#006a52";
+  const pageTitleContent = {
+    content: t("CONTACT US"),
+  };
+
+  const verticalLineColor = "#006a52";
 
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
 
-  let sideDrawer = (
+  const sideDrawer = (
     <div className={styles.sidedrawerbtn}>
       <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
       {drawerbtnActivated ? (
@@ -57,21 +62,12 @@ const ContactUs = ({ t }) => {
   return (
     <div className={styles.container}>
       <Head>
-        {/* website tab title */}
         <title>Contact Us | REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600&display=swap"
           rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
-          rel="stylesheet"
-        ></link>
+        />
         <meta
           name="viewport"
           content="initial-scale=1.0, maximum-scale=1, width=device-width, height=device-height, user-scalable=no"
@@ -99,9 +95,7 @@ const ContactUs = ({ t }) => {
       </header>
 
       <main className={styles.main}>
-        <div className={styles.pagetitle}>
-          <div className={styles.pagetitletextcontent}>{t("CONTACT US")}</div>
-        </div>
+        <PageTitle pageTitleContent={pageTitleContent} />
 
         <div className={styles.foundercontactcontainer}>
           <FounderDisplay

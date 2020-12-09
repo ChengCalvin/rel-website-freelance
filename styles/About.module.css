@@ -34,21 +34,6 @@
   overflow-x: hidden;
 }
 
-.pagetitle {
-  width: 100%;
-  height: 350px;
-  background-color: #006a52;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.pagetitletextcontent {
-  color: white;
-  font-size: 3.5rem;
-  font-weight: 200;
-}
-
 .abouttextcontainer {
   padding-left: 3vw;
   padding-right: 3vw;

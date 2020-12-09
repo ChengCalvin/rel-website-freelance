@@ -4,11 +4,11 @@ import styles from "../../styles/ContactUs.module.css";
 import { withTranslation, Trans } from "..../../../i18n";
 import PropsTypes from "prop-types";
 
-let SERVICE_ID = "service_27cl4ij";
-let TEMPLATE_ID = "template_li3sjql";
-let USER_ID = "user_r0gjxmlxZQlW7z56Pt59K";
+const SERVICE_ID = "service_27cl4ij";
+const TEMPLATE_ID = "template_li3sjql";
+const USER_ID = "user_r0gjxmlxZQlW7z56Pt59K";
 
-let initialClientMessage = {
+const initialClientMessage = {
   firstName: "",
   lastName: "",
   clientEmail: "",
@@ -16,13 +16,13 @@ let initialClientMessage = {
 };
 
 const ContactUs = ({ t }) => {
-  let [clientMessage, setClientMessage] = useState({
+  const [clientMessage, setClientMessage] = useState({
     firstName: "",
     lastName: "",
     clientEmail: "",
     message: "",
   });
-  let [buttonIsDisabled, setButtonIsDisabled] = useState(true);
+  const [buttonIsDisabled, setButtonIsDisabled] = useState(true);
 
   const onChangeHandler = (event) => {
     let value = event.target.value;
@@ -64,7 +64,7 @@ const ContactUs = ({ t }) => {
     document.getElementById("message").value = "";
   };
 
-  let submitButton = buttonIsDisabled ? (
+  const submitButton = buttonIsDisabled ? (
     <div className={styles.submitbtndisabled}>{t("Submit")}</div>
   ) : (
     <div className={styles.submitbtn} onClick={clientFormSubmitHandler}>

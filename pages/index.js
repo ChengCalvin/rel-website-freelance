@@ -10,9 +10,10 @@ import ContactUs from "../components/ContactUs/ContactUs";
 import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
 import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
+import PageTitle from "../components/PageContent/PageTitle";
 
-function Home({ t }) {
-  let founders = [
+const Home = ({ t }) => {
+  const founders = [
     {
       name: "HERBERT RATSCH",
       title1: t("Partner at REL Realty Advisors"),
@@ -25,7 +26,13 @@ function Home({ t }) {
       title2: t("President and Project Director at COGERCO"),
     },
   ];
-  let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+  const pageTitleContent = {
+    image: "images/RELLogoWhite.png",
+    alt: "rel-Logo",
+    content: t("paragraph1"),
+  };
+
+  const [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
 
   const drawerbtnClickedHandler = () => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
@@ -35,7 +42,7 @@ function Home({ t }) {
     i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
 
-  let sideDrawer = (
+  const sideDrawer = (
     <div className={styles.sidedrawerbtn}>
       <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
       {drawerbtnActivated ? (
@@ -53,21 +60,12 @@ function Home({ t }) {
   return (
     <div className={styles.container}>
       <Head>
-        {/* website tab title */}
         <title>REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600&display=swap"
           rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
-          rel="stylesheet"
-        ></link>
+        />
         <meta
           name="viewport"
           content="initial-scale=1.0, maximum-scale=1, width=device-width, height=device-height, user-scalable=no"
@@ -95,16 +93,7 @@ function Home({ t }) {
       </header>
 
       <main className={styles.main}>
-        <div className={styles.pagetitle}>
-          <div className={styles.pagetitlelogocontent}>
-            <img
-              className={styles.pagetitlelogo}
-              src="images/RELLogoWhite.png"
-              alt="rel-Logo-White"
-            />
-            <div className={styles.pagetitletextcontent}>{t("paragraph1")}</div>
-          </div>
-        </div>
+        <PageTitle pageTitleContent={pageTitleContent} />
 
         <div className={styles.foundersection}>
           <img
@@ -170,7 +159,7 @@ function Home({ t }) {
       </footer>
     </div>
   );
-}
+};
 
 Home.getInitialProps = async () => ({
   namespacesRequired: ["common"],

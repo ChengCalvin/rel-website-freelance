@@ -9,10 +9,13 @@ import ContactUs from "../components/ContactUs/ContactUs";
 import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
 import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
+import PageTitle from "../components/PageContent/PageTitle"
 
 const About = ({ t }) => {
-  let [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
-
+  const [drawerbtnActivated, setDrawerbtnActivated] = useState(false);
+  const pageTitleContent = {
+    content: t("ABOUT")
+  }
   const languageMenuHandler = () => {
     i18n.changeLanguage(i18n.language === "en" ? "fr" : "en");
   };
@@ -21,7 +24,7 @@ const About = ({ t }) => {
     setDrawerbtnActivated((drawerbtnActivated) => !drawerbtnActivated);
   };
 
-  let sideDrawer = (
+  const sideDrawer = (
     <div className={styles.sidedrawerbtn}>
       <DrawerButton drawerbtnClicked={drawerbtnClickedHandler} />
       {drawerbtnActivated ? (
@@ -39,21 +42,9 @@ const About = ({ t }) => {
   return (
     <div className={styles.container}>
       <Head>
-        {/* website tab title */}
         <title>About | REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap"
-          rel="stylesheet"
-        ></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
-          rel="stylesheet"
-        ></link>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600&display=swap" rel="stylesheet"/>
         <meta
           name="viewport"
           content="initial-scale=1.0, maximum-scale=1, width=device-width, height=device-height, user-scalable=no"
@@ -82,9 +73,7 @@ const About = ({ t }) => {
       </header>
 
       <main className={styles.main}>
-        <div className={styles.pagetitle}>
-          <div className={styles.pagetitletextcontent}>{t("ABOUT")}</div>
-        </div>
+        <PageTitle pageTitleContent={pageTitleContent} />
 
         <div className={styles.abouttextcontainer}>
           <div className={styles.abouttext1}>
