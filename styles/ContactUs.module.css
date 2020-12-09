@@ -127,10 +127,8 @@
 }
 
 .submitbtndisabled:hover {
-  color: rgb(156, 156, 156);
-  background-color: red;
-  width: 110px;
-  height: 40px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
   cursor: not-allowed;
 }
 
