@@ -13,10 +13,10 @@ const FounderDisplay = (props) => {
               <p>{founders.title1}</p>
               <p>{founders.title2}</p>
               <p>{founders.title3}</p>
-              <div>{founders.email}</div>
-              <div>{founders.phone}</div>
-              <div>{founders.cellphone}</div>
-              <div>{founders.tollfree}</div>
+              <p>{founders.email}</p>
+              <p>{founders.phone}</p>
+              <p>{founders.cellphone}</p>
+              <p>{founders.tollfree}</p>
             </div>
           </div>
         ))
