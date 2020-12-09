@@ -104,10 +104,14 @@ const Partner = ({ t }) => {
       <Head>
         <title>Partners | REL REALTY ADVISORS</title>
         <link rel="icon" href="/images/relLogo2.png" />
+<<<<<<< HEAD
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600&display=swap"
           rel="stylesheet"
         />
+=======
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600&display=swap" rel="stylesheet"/>
+>>>>>>> 20fda1b (code cleaning)
         <meta
           name="viewport"
           content="initial-scale=1.0, maximum-scale=1, width=device-width, height=device-height, user-scalable=no"
