@@ -13,6 +13,11 @@
   font-size: 2rem;
 }
 
+.contactustitle h2 {
+  margin: 0;
+  font-weight: 400;
+}
+
 .contactname {
   width: 100%;
   display: flex;

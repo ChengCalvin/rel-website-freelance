@@ -73,7 +73,9 @@ const ContactUs = ({ t }) => {
   );
   return (
     <div className={styles.contactus}>
-      <div className={styles.contactustitle}>{t("CONTACT US TODAY")}</div>
+      <div className={styles.contactustitle}>
+        <h2>{t("CONTACT US TODAY")}</h2>
+      </div>
       <div className={styles.contactname}>
         <div className={styles.contactfirstname}>
           <div>{t("First Name")}</div>
