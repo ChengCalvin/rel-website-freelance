@@ -102,9 +102,9 @@ const Home = ({ t }) => {
           />
           <div className={styles.foundersectionoverlay}>
             <div className={styles.founderscontainer}>
-              <div className={styles.founderpartnertitle}>
+              <h1 className={styles.founderpartnertitle}>
                 {t("FOUNDING PARTNERS")}
-              </div>
+              </h1>
               <FounderDisplay founders={founders} />
             </div>
           </div>

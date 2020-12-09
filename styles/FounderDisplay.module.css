@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.foundercontainer h1 {
+  margin: 0;
+}
+
 .foundername {
   font-weight: 900;
 }
@@ -21,6 +25,14 @@
   display: flex;
   flex-direction: column;
   font-weight: 100;
+}
+
+.foundertitlecontainer p {
+  margin: 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .verticalline {
@@ -50,7 +62,7 @@
 
 @media (min-width: 768px) {
   .allfounder {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .foundername {
     font-size: 1.5rem;

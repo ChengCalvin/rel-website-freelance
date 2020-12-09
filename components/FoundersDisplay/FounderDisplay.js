@@ -8,11 +8,11 @@ const FounderDisplay = (props) => {
       {props.founders
         .map((founders) => (
           <div className={styles.foundercontainer}>
-            <div className={styles.foundername}>{founders.name}</div>
+            <h1 className={styles.foundername}>{founders.name}</h1>
             <div className={styles.foundertitlecontainer}>
-              <div>{founders.title1}</div>
-              <div>{founders.title2}</div>
-              <div>{founders.title3}</div>
+              <p>{founders.title1}</p>
+              <p>{founders.title2}</p>
+              <p>{founders.title3}</p>
               <div>{founders.email}</div>
               <div>{founders.phone}</div>
               <div>{founders.cellphone}</div>
