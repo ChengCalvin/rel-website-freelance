@@ -29,6 +29,7 @@
 
 .foundertitlecontainer p {
   margin: 0;
+  width: 100%;
   height: auto;
   display: flex;
   align-items: center;
@@ -37,13 +38,15 @@
 
 .verticalline {
   border-left: 2px solid white;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 65%;
 }
 
 @media (min-width: 320px) {
   .allfounder {
     margin-top: 1rem;
+    height: 60%;
   }
   .foundercontainer {
     max-width: 50%;
@@ -73,5 +76,10 @@
   }
   .foundertitlecontainer {
     font-size: 1rem;
+  }
+  .verticalline {
+    border-left: 2px solid white;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
