@@ -98,6 +98,7 @@ const Home = ({ t }) => {
         <div className={styles.foundersection}>
           <img
             src="images/foundersection.jpg"
+            alt="section_image"
             style={{ width: "100%", height: "100%", zIndex: "2" }}
           />
           <div className={styles.foundersectionoverlay}>
@@ -125,6 +126,7 @@ const Home = ({ t }) => {
             <img
               className={styles.novatitle}
               src="/images/novatitleimage.png"
+              alt="nova_image"
             />
             <div className={styles.novacontenttitle}>
               {t(
@@ -137,6 +139,7 @@ const Home = ({ t }) => {
             <img
               className={styles.novacontentimage}
               src="/images/novacontentimage.JPG"
+              alt="nova_content"
             />
             <div className={styles.discovernovabtn}>
               <Link href="https://novatremblant.com/">

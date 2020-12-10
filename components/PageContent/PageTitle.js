@@ -10,6 +10,7 @@ const PageTitle = (props) => {
     >
       <img
         src="images/hometitlebackground.jpg"
+        alt="hometitlebackground"
         className={styles.hometitlebackground}
       />
       <div
