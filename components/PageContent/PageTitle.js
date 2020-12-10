@@ -8,6 +8,10 @@ const PageTitle = (props) => {
         props.pageTitleContent.image ? styles.pagetitle : styles.pagetitlenologo
       }
     >
+      <img
+        src="images/hometitlebackground.jpg"
+        className={styles.hometitlebackground}
+      />
       <div
         className={
           props.pageTitleContent.image ? styles.overlay : styles.overlaynologo

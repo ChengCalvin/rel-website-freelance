@@ -10,7 +10,7 @@
 }
 
 .contactustitle {
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .contactustitle h2 {
@@ -179,6 +179,9 @@
   .contactus {
     padding-left: 10vw;
     padding-right: 10vw;
+  }
+  .contactustitle {
+    font-size: 2rem;
   }
   .contactname {
     width: 100%;
