@@ -1,6 +1,6 @@
 .allfounder {
   display: flex;
-  height: 40%;
+  height: fit-content;
   text-align: center;
   width: 100%;
 }
@@ -45,7 +45,7 @@
 @media (min-width: 320px) {
   .allfounder {
     margin-top: 1rem;
-    height: 60%;
+    height: fit-content;
   }
   .foundercontainer {
     max-width: 50%;
