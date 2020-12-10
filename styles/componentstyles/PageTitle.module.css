@@ -75,7 +75,8 @@
 
 @media (min-width: 768px) {
   .pagetitlelogocontent {
-    width: 80%;
+    padding-left: 14vw;
+    padding-right: 14vw;
     display: flex;
     justify-content: center;
     align-items: center;
