@@ -72,6 +72,10 @@ const Home = ({ t }) => {
         />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="HandheldFriendly" content="true" />
+        <meta
+          name="description"
+          content="REL Realty Advisors is a consortium of real estate professionals who have been collaborating successfully on various projects for nearly fifteen years."
+        />
       </Head>
 
       <header className={styles.header}>
