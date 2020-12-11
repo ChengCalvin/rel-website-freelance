@@ -41,5 +41,7 @@
   "achievement3": "Drafting and implementation of a “Health and Safety Prevention Program” and “Quality Management System” leading to ISO 9001 accreditation.",
   "achievement4": "Management and execution of more than 30 residential buildings.",
   "achievement5": "Realization of several other project management from other industries, such as IT (management of the design and installation of the largest network of transactional self-service kiosks in Ontario, TERANET).",
-  "CLOSE MENU": "CLOSE MENU"
+  "CLOSE MENU": "CLOSE MENU",
+  "inputFieldErrorMessage": "Please fill",
+  "emailFieldError": "Invalid Email"
 }

@@ -18,6 +18,10 @@
   font-weight: 400;
 }
 
+.inputtitlecontainer {
+  display: flex;
+}
+
 .contactname {
   width: 100%;
   display: flex;
@@ -97,6 +101,12 @@
   outline-color: #006a52;
 }
 
+.errormessage p {
+  color: red;
+  margin: 0;
+  padding-left: 1rem;
+}
+
 .submitbtn {
   width: 100px;
   height: 30px;
@@ -105,7 +115,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4.6rem;
+  margin-top: 1.5rem;
 }
 
 .submitbtn:hover {
@@ -123,7 +133,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 1.5rem;
 }
 
 .submitbtndisabled:hover {
@@ -167,12 +177,6 @@
   .contactlastname {
     margin-top: 2rem;
   }
-  .submitbtn {
-    margin-top: 3rem;
-  }
-  .submitbtndisabled {
-    margin-top: 1.5rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -210,12 +214,6 @@
   .contactperson {
     min-width: 320px;
     font-size: 1.2rem;
-  }
-  .submitbtn {
-    margin-top: 4rem;
-  }
-  .submitbtndisabled {
-    margin-top: 2rem;
   }
 }
 

@@ -23,6 +23,7 @@ const ContactUs = ({ t }) => {
     message: "",
   });
   const [buttonIsDisabled, setButtonIsDisabled] = useState(true);
+  const [showError, setShowError] = useState(false);
 
   const onChangeHandler = (event) => {
     let value = event.target.value;
@@ -42,6 +43,7 @@ const ContactUs = ({ t }) => {
       clientMessage.message !== ""
     ) {
       setButtonIsDisabled(false);
+      setShowError(false);
     } else {
       setButtonIsDisabled(true);
     }
@@ -57,6 +59,19 @@ const ContactUs = ({ t }) => {
     setButtonIsDisabled(true);
   };
 
+  const disabledBtnHandler = () => {
+    if (
+      clientMessage.firstName === "" ||
+      clientMessage.lastName === "" ||
+      clientMessage.clientEmail === "" ||
+      clientMessage.message === ""
+    )
+      setShowError(true);
+    else {
+      setShowError(false);
+    }
+  };
+
   const clearInputField = () => {
     document.getElementById("firstName").value = "";
     document.getElementById("lastName").value = "";
@@ -65,7 +80,9 @@ const ContactUs = ({ t }) => {
   };
 
   const submitButton = buttonIsDisabled ? (
-    <div className={styles.submitbtndisabled}>{t("Submit")}</div>
+    <div className={styles.submitbtndisabled} onClick={disabledBtnHandler}>
+      {t("Submit")}
+    </div>
   ) : (
     <div className={styles.submitbtn} onClick={clientFormSubmitHandler}>
       {t("Submit")}
@@ -78,7 +95,12 @@ const ContactUs = ({ t }) => {
       </div>
       <div className={styles.contactname}>
         <div className={styles.contactfirstname}>
-          <div>{t("First Name")}</div>
+          <div className={styles.inputtitlecontainer}>
+            {t("First Name")}
+            <div className={styles.errormessage}>
+              {showError ? <p>{t("inputFieldErrorMessage")}</p> : <></>}
+            </div>
+          </div>
           <input
             type="text"
             name="firstName"
@@ -88,7 +110,12 @@ const ContactUs = ({ t }) => {
           />
         </div>
         <div className={styles.contactlastname}>
-          <div>{t("Last Name")}</div>
+          <div className={styles.inputtitlecontainer}>
+            {t("Last Name")}
+            <div className={styles.errormessage}>
+              {showError ? <p>{t("inputFieldErrorMessage")}</p> : <></>}
+            </div>
+          </div>
           <input
             type="text"
             name="lastName"
@@ -99,7 +126,12 @@ const ContactUs = ({ t }) => {
         </div>
       </div>
       <div className={styles.contactemail}>
-        <div>{t("Email")}</div>
+        <div className={styles.inputtitlecontainer}>
+          {t("Email")}
+          <div className={styles.errormessage}>
+            {showError ? <p>{t("emailFieldError")}</p> : <></>}
+          </div>
+        </div>
         <input
           type="text"
           name="clientEmail"
@@ -109,7 +141,12 @@ const ContactUs = ({ t }) => {
         />
       </div>
       <div className={styles.contactmessage}>
-        <div>{t("Comment or Message")}</div>
+        <div className={styles.inputtitlecontainer}>
+          {t("Comment or Message")}
+          <div className={styles.errormessage}>
+            {showError ? <p>{t("inputFieldErrorMessage")}</p> : <></>}
+          </div>
+        </div>
         <textarea
           type="text"
           name="message"
