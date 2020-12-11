@@ -37,13 +37,10 @@
 .contactuscontainer {
   background-color: rgb(156, 156, 156);
   width: 100%;
-  height: 46rem;
+  height: fit-content;
   margin-top: 2rem;
+  padding-bottom: 2rem;
   color: white;
-}
-
-.contactuscontainer:lang(fr) {
-  height: 50rem;
 }
 
 .foundercontactcontainer {
@@ -127,12 +124,6 @@
     padding-left: 10vw;
     padding-right: 10vw;
   }
-  .contactuscontainer {
-    height: 40rem;
-  }
-  .contactuscontainer:lang(fr) {
-    height: 44rem;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -147,8 +138,5 @@
   .foundercontactcontainer {
     padding-left: 24vw;
     padding-right: 24vw;
-  }
-  .contactuscontainer:lang(fr) {
-    height: 44rem;
   }
 }

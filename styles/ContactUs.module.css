@@ -121,8 +121,6 @@
 .submitbtn:hover {
   background-color: #006a52;
   color: black;
-  width: 110px;
-  height: 40px;
 }
 
 .submitbtndisabled {

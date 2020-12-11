@@ -59,7 +59,10 @@ const ContactUs = ({ t }) => {
   const clientFormSubmitHandler = () => {
     if (captchaVerified) {
       emailjs.send(SERVICE_ID, TEMPLATE_ID, clientMessage, USER_ID).then(
-        (response) => console.log("Success", response),
+        (response) => {
+          console.log("Success", response);
+          window.location.reload();
+        },
         (error) => console.log("Failed", error)
       );
       setClientMessage(initialClientMessage);
