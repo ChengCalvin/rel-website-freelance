@@ -42,6 +42,6 @@
   "achievement4": "Management and execution of more than 30 residential buildings.",
   "achievement5": "Realization of several other project management from other industries, such as IT (management of the design and installation of the largest network of transactional self-service kiosks in Ontario, TERANET).",
   "CLOSE MENU": "CLOSE MENU",
-  "inputFieldErrorMessage": "Please fill",
+  "inputFieldErrorMessage": "Empty Field",
   "emailFieldError": "Invalid Email"
 }

@@ -45,6 +45,6 @@
   "achievement5": "Gestion et construction de plus de 30 immeubles résidentiels;",
   "achievement6": "Réalisation de plusieurs projets de gestion dans d’autres compagnies d’informatique (conception et implantation du plus grand réseau de kiosques transactionnels libre-service en Ontario, TERANET);",
   "CLOSE MENU": "FERMER",
-  "inputFieldErrorMessage": "S.V.P. Remplir",
+  "inputFieldErrorMessage": "Case vide",
   "emailFieldError": "Email Invalide"
 }
