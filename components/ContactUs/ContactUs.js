@@ -3,10 +3,12 @@ import emailjs from "emailjs-com";
 import styles from "../../styles/ContactUs.module.css";
 import { withTranslation, Trans } from "..../../../i18n";
 import PropsTypes from "prop-types";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const SERVICE_ID = "service_27cl4ij";
 const TEMPLATE_ID = "template_li3sjql";
 const USER_ID = "user_r0gjxmlxZQlW7z56Pt59K";
+const RECAPTCHA = "6Lc8ogIaAAAAAOEAkNWvOdBkiz6qWDoQWs8-dVuN";
 
 const initialClientMessage = {
   firstName: "",
@@ -24,6 +26,7 @@ const ContactUs = ({ t }) => {
   });
   const [buttonIsDisabled, setButtonIsDisabled] = useState(true);
   const [showError, setShowError] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
 
   const onChangeHandler = (event) => {
     let value = event.target.value;
@@ -49,14 +52,22 @@ const ContactUs = ({ t }) => {
     }
   };
 
+  const captchaIsVerifiedHandler = () => {
+    setCaptchaVerified(true);
+  };
+
   const clientFormSubmitHandler = () => {
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, clientMessage, USER_ID).then(
-      (response) => console.log("Success", response),
-      (error) => console.log("Failed", error)
-    );
-    setClientMessage(initialClientMessage);
-    clearInputField();
-    setButtonIsDisabled(true);
+    if (captchaVerified) {
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, clientMessage, USER_ID).then(
+        (response) => console.log("Success", response),
+        (error) => console.log("Failed", error)
+      );
+      setClientMessage(initialClientMessage);
+      clearInputField();
+      setButtonIsDisabled(true);
+    } else {
+      alert("Please verify that you are not a robot");
+    }
   };
 
   const disabledBtnHandler = () => {
@@ -173,6 +184,11 @@ const ContactUs = ({ t }) => {
           </div>
         </div>
       </div>
+      {!buttonIsDisabled ? (
+        <ReCAPTCHA sitekey={RECAPTCHA} onChange={captchaIsVerifiedHandler} />
+      ) : (
+        <></>
+      )}
       {submitButton}
     </div>
   );

@@ -77,6 +77,11 @@ const Home = ({ t }) => {
           name="description"
           content="REL Realty Advisors is a consortium of real estate professionals who have been collaborating successfully on various projects for nearly fifteen years."
         />
+        <script
+          src="https://www.google.com/recaptcha/api.js"
+          async
+          defer
+        ></script>
       </Head>
 
       <header className={styles.header}>
