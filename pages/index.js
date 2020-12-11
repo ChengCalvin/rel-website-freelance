@@ -11,6 +11,7 @@ import { withTranslation, i18n, Link } from "../i18n";
 import PropsTypes from "prop-types";
 import LanguageMenu from "../components/LanguageMenu/LanguageMenu";
 import PageTitle from "../components/PageContent/PageTitle";
+import NovaImages from "../components/PageContent/NovaImages";
 
 const Home = ({ t }) => {
   const founders = [
@@ -140,11 +141,9 @@ const Home = ({ t }) => {
             <div className={styles.novacontentdescription}>
               {t("Novaparagraph")}
             </div>
-            <img
-              className={styles.novacontentimage}
-              src="/images/novacontentimage.JPG"
-              alt="nova_content"
-            />
+
+            <NovaImages />
+
             <div className={styles.discovernovabtn}>
               <Link href="https://novatremblant.com/">
                 <div className={styles.discovernovabtntext}>
