@@ -27,10 +27,13 @@ const Home = ({ t }) => {
       title2: t("President and Project Director at COGERCO"),
     },
   ];
+
   const pageTitleContent = {
     image: "images/RELLogoWhite.png",
     alt: "rel-Logo",
     content: t("paragraph1"),
+    titleImg: "images/hometitlebackground.jpg",
+    altImg: "hometitlebackground",
   };
 
   const [drawerbtnActivated, setDrawerbtnActivated] = useState(false);

@@ -9,8 +9,8 @@ const PageTitle = (props) => {
       }
     >
       <img
-        src="images/hometitlebackground.jpg"
-        alt="hometitlebackground"
+        src={props.pageTitleContent.titleImg}
+        alt={props.pageTitleContent.altImg}
         className={
           props.pageTitleContent.image
             ? styles.hometitlebackground

@@ -78,6 +78,8 @@ const Partner = ({ t }) => {
 
   const pageTitleContent = {
     content: t("PARTNERS"),
+    titleImg: "images/hometitlebackground.jpg",
+    altImg: "hometitlebackground",
   };
 
   const drawerbtnClickedHandler = () => {

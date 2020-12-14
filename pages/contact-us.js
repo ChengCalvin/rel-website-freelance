@@ -36,6 +36,8 @@ const ContactUs = ({ t }) => {
 
   const pageTitleContent = {
     content: t("CONTACT US"),
+    titleImg: "images/hometitlebackground.jpg",
+    altImg: "hometitlebackground",
   };
 
   const verticalLineColor = "#006a52";
