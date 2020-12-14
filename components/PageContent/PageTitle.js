@@ -11,7 +11,11 @@ const PageTitle = (props) => {
       <img
         src="images/hometitlebackground.jpg"
         alt="hometitlebackground"
-        className={styles.hometitlebackground}
+        className={
+          props.pageTitleContent.image
+            ? styles.hometitlebackground
+            : styles.hometitlebackgroundnologo
+        }
       />
       <div
         className={
