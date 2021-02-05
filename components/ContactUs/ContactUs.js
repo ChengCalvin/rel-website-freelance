@@ -5,11 +5,6 @@ import { withTranslation, Trans } from "..../../../i18n";
 import PropsTypes from "prop-types";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const SERVICE_ID = "service_27cl4ij";
-const TEMPLATE_ID = "template_li3sjql";
-const USER_ID = "user_r0gjxmlxZQlW7z56Pt59K";
-const RECAPTCHA = "6Lc8ogIaAAAAAOEAkNWvOdBkiz6qWDoQWs8-dVuN";
-
 const initialClientMessage = {
   firstName: "",
   lastName: "",
@@ -58,13 +53,20 @@ const ContactUs = ({ t }) => {
 
   const clientFormSubmitHandler = () => {
     if (captchaVerified) {
-      emailjs.send(SERVICE_ID, TEMPLATE_ID, clientMessage, USER_ID).then(
-        (response) => {
-          console.log("Success", response);
-          window.location.reload();
-        },
-        (error) => console.log("Failed", error)
-      );
+      emailjs
+        .send(
+          process.env.SERVICE_ID,
+          process.env.TEMPLATE_ID,
+          clientMessage,
+          process.env.USER_ID
+        )
+        .then(
+          (response) => {
+            console.log("Success", response);
+            window.location.reload();
+          },
+          (error) => console.log("Failed", error)
+        );
       setClientMessage(initialClientMessage);
       clearInputField();
       setButtonIsDisabled(true);
@@ -188,7 +190,10 @@ const ContactUs = ({ t }) => {
         </div>
       </div>
       {!buttonIsDisabled ? (
-        <ReCAPTCHA sitekey={RECAPTCHA} onChange={captchaIsVerifiedHandler} />
+        <ReCAPTCHA
+          sitekey={process.env.RECAPTCHA_KEY}
+          onChange={captchaIsVerifiedHandler}
+        />
       ) : (
         <></>
       )}
